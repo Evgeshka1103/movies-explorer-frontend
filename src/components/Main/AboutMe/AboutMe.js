@@ -11,6 +11,7 @@ export default function AboutMe() {
         <div className="about__me_line"></div>
         <div className="about__me_block">
           <div className="about__me_student">
+          <img src={photo} alt="Фотография" className="about__me_photo" />
             <h5 className="about__me_name">Евгения</h5>
             <h6 className="about__me_about">Фронтенд-разработчик, 28 лет</h6>
             <p className="about__me_info">
@@ -29,7 +30,7 @@ export default function AboutMe() {
               Github
             </Link>
           </div>
-          <img src={photo} alt="Фотография" className="about__me_photo" />
+          
         </div>
         <Portfolio />
       </div>
