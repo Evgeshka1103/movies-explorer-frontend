@@ -28,6 +28,13 @@
 
 .about__me_block {
   display: flex;
+  justify-content: space-between;
+}
+
+.about__me_block-student{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
 }
 
 .about__me_name {
@@ -72,7 +79,7 @@
 
 .about__me_photo {
   width: 100%;
-  margin: 66px 0 0 270px;
+  margin: 66px 0 0 870px;
   max-width: 270px;
   height: 327px;
   border-radius: 10px;
@@ -90,6 +97,7 @@
   .about__me_container {
     padding: 0 50px;
   }
+
 
   .about__me_name {
     font-size: 40px;
@@ -113,7 +121,7 @@
     width: 100%;
     max-width: 255px;
     height: 307px;
-    margin: 66px 0 0 49px;
+    margin: 66px 0 0 413px;
   }
 }
 
@@ -130,12 +138,21 @@
 
   .about__me_container {
     padding: 0 14px;
+    height: 1198px;
   }
 
 .about__me_block{
   display: flex;
   flex-direction: column;
+  height: 654px;
   
+}
+
+.about__me_block-student{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 452px;
 }
 
   .about__me_name {
