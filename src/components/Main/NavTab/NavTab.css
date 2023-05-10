@@ -1,0 +1,36 @@
+.nav__tab {
+  background: #000000;
+}
+
+.nav__tab_block {
+  display: flex;
+  height: 66px;
+  margin: 0;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav__tab_link {
+  display: flex;
+  margin-right: 40px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #ffffff;
+  padding-top: 24px;
+}
+
+@media screen and (max-width: 320px) {
+  .nav__tab_block {
+    padding: 0 50px;
+  }
+
+  .nav__tab_link {
+    width: 100%;
+    margin-right: 24px;
+    font-size: 11px;
+    padding-top: 25px;
+  }
+}
