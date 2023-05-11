@@ -85,6 +85,31 @@
   border-radius: 10px;
 }
 
+@media screen and (max-width: 900px) {
+  .about__me_line{
+    width: 780px;
+  }
+
+  .about__me_block{
+    width: 780px;
+    flex-direction: column;
+  }
+
+  .about__me_photo{
+    max-width: 250px;
+    height: 300px;
+    margin: 66px 0 32px 530px;
+  }
+
+  .about__me_block-student{
+    width: 450px;
+  }
+
+  .about__me_info{
+    width: 450px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .about__me_title {
     margin-top: 90px;
@@ -122,6 +147,62 @@
     max-width: 255px;
     height: 307px;
     margin: 66px 0 0 413px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .about__me_line{
+    width: 460px;
+  }
+
+  .about__me_block{
+    width: 460px;
+    flex-direction: column;
+  }
+
+  .about__me_photo{
+    max-width: 300px;
+    height: 350px;
+    margin: 66px 0;
+  }
+
+  .about__me_block-student{
+    margin: 420px 0 0;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  .about__me_line{
+    width: 300px;
+  }
+
+  .about__me_block{
+    flex-direction: column;
+  }
+
+  .about__me_photo{
+    max-width: 300px;
+    height: 350px;
+    margin: 66px 0;
+  }
+
+  .about__me_name{
+    margin: 450px 0 0;
+  }
+
+  .about__me_about{
+    position: absolute;
+    margin: 500px 0 0;
+  }
+
+  .about__me_info{
+    width: 300px;
+    margin: 50px 0 0;
+  }
+
+  .about__me_link{
+    margin: 15px 0 0;
   }
 }
 

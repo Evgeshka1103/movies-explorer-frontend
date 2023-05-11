@@ -9,7 +9,7 @@ export default function AboutProject() {
         <div className="about__project_blocks">
           <div className="about__project_description">
             <div className="about__project_block">
-              <h3 className="about__project_title">
+              <h3 className="about__project_title" >
                 Дипломный проект включал 5 этапов
               </h3>
               <p className="about__project_text">

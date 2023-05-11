@@ -10,14 +10,14 @@ import BurgerMenu from "../BurgerMenu/BurgerMenu";
 export default function Movies({ movies }) {
   return (
     <div className="movies">
-      <div className="header__movies">
+      <header className="header__movies">
         <Link to="/">
           <img className="movies__logo" src={logo} alt="Логотип" />
         </Link>
 
         <NavProfile />
         <BurgerMenu />
-      </div>
+      </header>
       <SearchForm />
       <MoviesCardList movies={movies} />
       <div className="movies__block_button">

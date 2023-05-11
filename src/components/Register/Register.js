@@ -15,6 +15,7 @@ export default function Register() {
           <div className="auth__field">
             <input
               className="auth__input"
+              placeholder="name"
               type="text"
               name="name"
               minLength="2"
@@ -28,6 +29,7 @@ export default function Register() {
           <div className="auth__field">
             <input
               className="auth__input"
+              placeholder="email"
               type="email"
               name="email"
               minLength="6"
@@ -41,6 +43,7 @@ export default function Register() {
           <div className="auth__field">
             <input
               className="auth__input auth__input_password"
+              placeholder="password"
               type="password"
               name="password"
               minLength="6"

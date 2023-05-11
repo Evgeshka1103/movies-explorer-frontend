@@ -13,7 +13,7 @@ export default function Portfolio() {
             target="_blank"
           >
             <h3 className="portfolio__text">Статичный сайт</h3>
-            <div className="portfolio__link_go">↗</div>
+            <h4 className="portfolio__link_go">↗</h4>
           </Link>
           <div className="portfolio__block_line"></div>
         </li>
@@ -24,7 +24,7 @@ export default function Portfolio() {
             target="_blank"
           >
             <h3 className="portfolio__text">Адаптивный сайт</h3>
-            <div className="portfolio__link_go">↗</div>
+            <h4 className="portfolio__link_go">↗</h4>
           </Link>
           <div className="portfolio__block_line"></div>
         </li>
@@ -35,7 +35,7 @@ export default function Portfolio() {
             target="_blank"
           >
             <h3 className="portfolio__text">Одностраничное приложение</h3>
-            <div className="portfolio__link_go">↗</div>
+            <h4 className="portfolio__link_go">↗</h4>
           </Link>
         </li>
       </ul>

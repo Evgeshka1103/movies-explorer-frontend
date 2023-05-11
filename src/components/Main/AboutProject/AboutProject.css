@@ -118,6 +118,12 @@
   margin: 0 0 110px;
 }
 
+@media screen and (max-width: 900px) {
+  .about__title_line{
+    width: 780px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .about__project_container {
     padding: 0 50px;
@@ -157,8 +163,20 @@
   }
 }
 
+@media screen and (max-width: 560px) {
+  .about__title_line{
+    width: 460px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about__title_line{
+    width: 300px;
+  }
+}
+
 @media screen and (max-width: 320px) {
-  .about__project_container {
+.about__project_container {
     padding: 0 18px;
   }
 

@@ -15,6 +15,7 @@ export default function Login() {
           <div className="login__field">
             <input
               className="login__input"
+              placeholder="email"
               type="email"
               name="email"
               minLength="6"
@@ -28,6 +29,7 @@ export default function Login() {
           <div className="login__field">
             <input
               className="login__input login__input_password"
+              placeholder="password"
               type="password"
               name="password"
               minLength="6"

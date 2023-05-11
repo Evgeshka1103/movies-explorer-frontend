@@ -7,13 +7,13 @@ import BurgerMenu from "../BurgerMenu/BurgerMenu";
 export default function Profile() {
   return (
     <div className="profile">
-      <div className="profile__header">
+      <header className="profile__header">
         <Link to="/">
           <img className="profile__logo" src={logo} alt="Логотип" />
         </Link>
         <NavProfile />
         <BurgerMenu />
-      </div>
+      </header>
 
       <div className="profile__content">
         <h2 className="profile__title">Привет, Виталий!</h2>
@@ -23,6 +23,7 @@ export default function Profile() {
               <h5 className="profile__placeholder">Имя</h5>
               <input
                 className="profile__input"
+                placeholder="name"
                 type="name"
                 name="name"
                 minLength="2"
@@ -36,6 +37,7 @@ export default function Profile() {
               <h5 className="profile__placeholder">E-mail</h5>
               <input
                 className="profile__input"
+                placeholder="email"
                 type="email"
                 name="email"
                 minLength="6"

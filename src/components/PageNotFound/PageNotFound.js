@@ -10,8 +10,8 @@ export default function PageNotFound() {
     <div className="page__not-found">
       <p className="page__not_title">404</p>
       <h7 className="page__not_subtitle">Страница не найдена</h7>
-      <Link className="back">
-        <button className="button__back" onClick={returnActivePage}>
+      <Link className="page__not_back">
+        <button className="page__not_button-back" onClick={returnActivePage}>
           Назад
         </button>
       </Link>

@@ -11,14 +11,14 @@ import BurgerMenu from "../BurgerMenu/BurgerMenu";
 export default function SavedMovies({ movies }) {
   return (
     <div className="saved__movies">
-      <div className="saved__movies_header">
+      <header className="saved__movies_header">
         <Link to="/">
           <img className="saved__movies_logo" src={logo} alt="Логотип" />
         </Link>
 
         <NavProfile />
         <BurgerMenu />
-      </div>
+      </header>
       <SearchForm />
       <MoviesCardList
         movies={movies.filter((movie) => movie.favorite === true)}

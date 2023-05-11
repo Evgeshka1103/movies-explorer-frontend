@@ -20,8 +20,7 @@
 
 .techs__title_line {
   width: 1140px;
-  padding-top: 23px;
-  margin-left: 70px;
+  margin: 23px auto 0;
   border-bottom: 1px solid #000000;
 }
 
@@ -84,6 +83,12 @@
   margin-right: 0;
 }
 
+@media screen and (max-width: 900px) {
+  .techs__title_line{
+    width: 780px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .techs__title {
     padding-top: 90px;
@@ -120,6 +125,21 @@
     line-height: 15px;
     border-radius: 10px;
     padding-bottom: 21px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .techs__title_line{
+    width: 460px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .techs__title_line{
+    width: 300px;
+  }
+  .techs__text{
+    width: 300px;
   }
 }
 

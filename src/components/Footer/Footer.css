@@ -70,6 +70,12 @@
   opacity: 0.5;
 }
 
+@media  screen and (max-width: 900px) {
+  .footer__line{
+    width: 780px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .footer__line {
     width: 668px;
@@ -82,6 +88,18 @@
 
   .footer__links {
     padding-right: 50px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+.footer__line{
+  width: 460px;
+}
+}
+
+@media screen and (max-width: 400px) {
+  .footer__line{
+    width: 300px;
   }
 }
 
