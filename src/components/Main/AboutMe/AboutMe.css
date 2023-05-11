@@ -85,28 +85,28 @@
   border-radius: 10px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1124px){
   .about__me_line{
-    width: 780px;
+    width: 984px;
   }
-
-  .about__me_block{
-    width: 780px;
-    flex-direction: column;
-  }
-
   .about__me_photo{
-    max-width: 250px;
-    height: 300px;
-    margin: 66px 0 32px 530px;
+    margin: 66px 0 0 716px;
   }
+}
 
+@media screen and (max-width: 960px) {
+  .about__me_line{
+    width: 820px;
+  }
+  .about__me_photo{
+    margin: 66px 0 0 558px;
+  }
   .about__me_block-student{
-    width: 450px;
+    width: 500px;
   }
 
   .about__me_info{
-    width: 450px;
+    width: 500px;
   }
 }
 

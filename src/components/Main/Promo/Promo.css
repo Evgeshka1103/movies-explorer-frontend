@@ -24,15 +24,9 @@
   letter-spacing: -0.04em;
 }
 
-@media screen and (max-width: 900px) {
-  .promo__image {
-    padding: 100px 300px;
-  }
-
-  .promo__title {
-    width: 700px;
-    padding: 212px 110px;
-    margin: 0;
+@media screen and (max-width: 1124px) {
+  .promo__image{
+    padding: 156px 402px 187px;
   }
 }
 

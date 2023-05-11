@@ -60,7 +60,7 @@
 @media screen and (max-width: 320px) {
   .header__main_navigation {
     width: 132px;
-    margin: 0 14px 0 auto;
+    margin: 0;
   }
 
   .header__links_user {

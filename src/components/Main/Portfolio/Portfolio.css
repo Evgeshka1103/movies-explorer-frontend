@@ -65,9 +65,15 @@ color: #000000;
   border-bottom: 1px solid #e8e8e8;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1124px) {
+ .portfolio__block_line{
+  width: 984px;
+ } 
+}
+
+@media screen and (max-width: 960px) {
   .portfolio__block_line{
-    width: 780px;
+    width: 820px;
   }
 }
 
@@ -123,10 +129,9 @@ color: #000000;
 }
 
 @media screen and (max-width: 320px) {
-
-  .portfolio__title {
+.portfolio__title {
     font-size: 14px;
-    margin-top: 70px;
+    margin-top: 170px;
   }
 
   .portfolio__list_links {

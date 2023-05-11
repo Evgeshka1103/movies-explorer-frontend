@@ -83,9 +83,15 @@
   margin-right: 0;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1124px) {
   .techs__title_line{
-    width: 780px;
+    width: 984px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .techs__title_line{
+    width: 820px;
   }
 }
 
