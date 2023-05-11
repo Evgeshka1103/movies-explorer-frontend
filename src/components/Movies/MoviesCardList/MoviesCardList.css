@@ -1,11 +1,10 @@
 .movies__card_list {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1140px;
   min-width: 320px;
-  padding: 0;
+  padding: 0 70px;
   margin: 70px 0 12px;
   display: grid;
-  justify-content: center;
   grid-template-columns: repeat(3, 360px);
   gap: 43px 30px;
 }

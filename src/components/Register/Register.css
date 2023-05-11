@@ -109,10 +109,11 @@
   width: 218px;
   height: 17px;
   gap: 6px;
+  margin: 0 auto 70px;
 }
 
 .auth__text_register {
-  width: 169px;
+  min-width: 169px;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -176,6 +177,54 @@
 
   .auth__button {
     width: 260px;
+    margin: 157px auto 14px;
+  }
+
+  .auth__register {
+    margin: 0 36px 30px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .auth__text_register {
+    width: 145px;
+    height: 15px;
+    margin: 0;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .auth__login {
+    width: 36px;
+    font-size: 12px;
+    line-height: 15px;
+    height: 15px;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 404px) {
+  .auth__container {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .auth__logo {
+    margin: 56px 111px 50px;
+  }
+
+  .auth__title {
+    width: 300px;
+    padding-bottom: 80px;
+  }
+
+  .auth__field {
+    width: 300px;
+  }
+
+  .auth__button {
+    width: 300px;
     margin: 157px auto 14px;
   }
 
