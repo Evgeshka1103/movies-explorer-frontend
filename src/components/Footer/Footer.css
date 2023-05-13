@@ -7,6 +7,10 @@
   margin: 0 auto;
 }
 
+.footer__container{
+  padding: 0 70px;
+}
+
 .footer__project {
   padding-top: 79px;
   margin: 0;
@@ -20,13 +24,13 @@
 }
 
 .footer__line {
-  width: 1140px;
+  width: 100%;
   padding-top: 20px;
-  margin-left: 70px;
+  margin: 0;
   border-bottom: 1px solid #e8e8e8;
 }
 
-.footer__container {
+.footer__block {
   padding-top: 20px;
   height: 36px;
   display: flex;
@@ -38,7 +42,7 @@
 .footer__copyright {
   margin-top: 0;
   margin-bottom: 20px;
-  padding-left: 70px;
+  width: 48px;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -52,11 +56,13 @@
   width: 182px;
   justify-content: space-between;
   margin: 0;
-  padding-right: 70px;
+  padding: 0;
   list-style-type: none;
 }
 
 .footer__link_go {
+  display: flex;
+  width: 100%;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -70,58 +76,41 @@
   opacity: 0.5;
 }
 
-@media screen and (max-width: 1124px) {
- .footer__line{
-  width: 984px;
- }
+.footer__link_git {
+  display: flex;
+  width: 100%;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+  text-decoration: none;
 }
 
-@media screen and (max-width: 960px) {
-  .footer__line{
-    width: 820px;
-  }
+.footer__link_git:hover {
+  opacity: 0.5;
 }
+
+
 
 @media screen and (max-width: 768px) {
-  .footer__line {
-    width: 668px;
-    margin-left: 50px;
-  }
-
-  .footer__copyright {
-    padding-left: 50px;
-  }
-
-  .footer__links {
-    padding-right: 50px;
-  }
+.footer__container{
+  padding: 0 50px;
+}
 }
 
-@media screen and (max-width: 560px) {
-  .footer__line{
-    width: 460px;
-  }
-  }
-  
-  @media screen and (max-width: 400px) {
-    .footer__line{
-      width: 300px;
-    }
-  }
-
 @media screen and (max-width: 320px) {
+.footer__container{
+  padding: 0 10px;
+}
+
   .footer__project {
     font-size: 12px;
     line-height: 15px;
   }
 
-  .footer__line {
-    width: 300px;
-    padding-top: 21px;
-    margin-left: 10px;
-  }
-
-  .footer__container {
+  .footer__block {
     padding-top: 30px;
     height: 107px;
     flex-direction: column;
@@ -135,20 +124,24 @@
     width: 111px;
     flex-direction: column;
     margin: 0 auto;
-    padding-right: 0;
     list-style-type: none;
     row-gap: 12px;
-    padding: 0;
     align-items: center;
   }
 
   .footer__link_go {
     font-size: 12px;
     line-height: 15px;
+    margin: 0;
+  }
+
+  .footer__link_git {
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0 auto;
   }
 
   .footer__copyright {
-    padding-left: 0;
     font-size: 12px;
     line-height: 15px;
     margin-top: 102px;

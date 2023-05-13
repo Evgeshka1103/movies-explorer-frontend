@@ -10,20 +10,23 @@ import BurgerMenu from "../BurgerMenu/BurgerMenu";
 export default function Movies({ movies }) {
   return (
     <div className="movies">
-      <header className="header__movies">
-        <Link to="/">
-          <img className="movies__logo" src={logo} alt="Логотип" />
-        </Link>
+      <div className="movies__container">
+        <header className="movies__header">
+          <Link to="/">
+            <img className="movies__logo" src={logo} alt="Логотип" />
+          </Link>
 
-        <NavProfile />
-        <BurgerMenu />
-      </header>
-      <SearchForm />
-      <MoviesCardList movies={movies} />
-      <div className="movies__block_button">
-        <button className="movies__buton_content">Ещё</button>
+          <NavProfile />
+          <BurgerMenu />
+        </header>
+        <SearchForm />
+        </div>
+      <div className="movies__section">
+        <MoviesCardList movies={movies} />
+        <div className="movies__block_button">
+          <button className="movies__buton_content">Ещё</button>
+        </div>
       </div>
-
       <Footer />
     </div>
   );

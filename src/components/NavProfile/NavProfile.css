@@ -1,11 +1,11 @@
-.header__navigation_profile {
-  width: 1172px;
+.navbar__header_navigation-profile {
+  width: 100%;
   display: flex;
 }
 
 .navbar__profile {
   display: flex;
-  margin: 21px 70px 23px auto;
+  margin: 21px 0 23px auto;
   padding: 0;
   list-style: none;
   align-items: center;
@@ -44,7 +44,7 @@
   display: flex;
   list-style: none;
   padding: 0;
-  margin: 21px 70px 23px 0;
+  margin: 21px 0 23px;
   gap: 13px;
 }
 
@@ -80,13 +80,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  .header__navigation_profile {
+  .navbar__header_navigation-profile {
     display: none;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .header__navigation_profile {
+  .navbar__header_navigation-profile {
     display: none;
   }
 }

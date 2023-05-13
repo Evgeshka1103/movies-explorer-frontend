@@ -1,66 +1,15 @@
 .movies__card {
   display: grid;
   border-radius: 6px;
-}
-
-.movies__card_block {
-  width: 360px;
-  height: 201px;
-  display: flex;
-  border-radius: 0px;
-  cursor: pointer;
-}
-
-.movies__card_icon {
-  background-color: transparent;
-  display: flex;
-  position: absolute;
-  min-width: 72px;
-  height: 21px;
-  padding: 0;
-  border-radius: 30px;
-  border: none;
-  cursor: pointer;
-  margin: 14px 14px 166px 274px;
-}
-
-.movies__card_save {
-  background-image: none;
-}
-
-.movies__card_save:hover {
-  background-image: url(../../../images/save-button.png);
-}
-
-.movies__card_save-active {
-  background-image: url(../../../images/save-ok.png);
-  min-width: 21px;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  margin: 14px 325px 166px;
-}
-
-.movies__card_delete {
-  background-image: none;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  min-width: 21px;
-  height: 21px;
-  position: absolute;
-  margin: 14px 14px 166px 325px;
-  cursor: pointer;
-}
-
-.movies__card_delete:hover {
-  background-image: url(../../../images/delete.png);
+  width: 100%;
+  max-width: 360px;
 }
 
 .movies__card_poster {
-  width: 360px;
-  height: 201px;
-  object-fit: cover;
+  width: 100%;
+  max-width: 360px;
+  /*height: 201px;*/
+  object-fit: contain;
 }
 
 .movies__card_description {
@@ -107,47 +56,109 @@
   margin: 4px 4px 0;
 }
 
-@media screen and (max-width: 768px) {
-  .movies__card_block {
-    width: 339px;
-    height: 190px;
+.movies__card_icon {
+  background-color: transparent;
+  display: flex;
+  position: absolute;
+  min-width: 72px;
+  height: 21px;
+  padding: 0;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  margin: 14px 0 0 274px;
+  background-size: contain;
+}
+
+.movies__card_save {
+  background-image: none;
+}
+
+.movies__card_save:hover {
+  background-image: url(../../../images/save-button.png);
+}
+
+.movies__card_save-active {
+  background-image: url(../../../images/save-ok.png);
+  min-width: 21px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: contain;
+  margin: 14px 0 0 325px;
+  position: absolute;
+}
+
+.movies__card_delete {
+  background-image: none;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: contain;
+  border: none;
+  padding: 0;
+  min-width: 21px;
+  height: 21px;
+  position: absolute;
+  margin: 14px 0 0 325px;
+  cursor: pointer;
+}
+
+.movies__card_delete:hover {
+  background-image: url(../../../images/delete.png);
+}
+
+@media screen and (max-width: 1190px) {
+  .movies__card_poster{
+    max-width: 330px;
   }
 
-  .movies__card_icon {
-    margin: 14px 14px 155px 253px;
+  .movies__card_description{
+    margin: 14px 0 0;
   }
 
-  .movies__card_save-active {
-    margin: 14px 14px 155px 304px;
+  .movies__card_duration-block{
+    margin: 0;
   }
 
-  .movies__card_delete {
-    margin: 14px 14px 155px 304px;
+  .movies__card_icon{
+    margin: 14px 0 0 244px;
   }
 
-  .movies__card_poster {
-    width: 339px;
-    height: 190px;
+  .movies__card_save-active{
+    margin: 14px 0 0 295px;
+  }
+
+  .movies__card_delete{
+    margin: 14px 0 0 295px;
   }
 }
 
-@media screen and (max-width: 320px) {
-  .movies__card_block {
-    width: 300px;
-    height: 168px;
-    margin: 0 auto;
+@media screen and (max-width: 768px) {
+  .movies__card_icon{
+    margin: 14px 0 0 253px;
   }
 
+  .movies__card_save-active{
+    margin: 14px 0 0 304px;
+  }
+
+  .movies__card_delete{
+    margin: 14px 0 0 304px;
+  }
+  
+}
+
+@media screen and (max-width: 320px){
+
   .movies__card_icon {
-    margin: 10px 10px 137px 218px;
+    margin: 10px 0 0 218px;
   }
 
   .movies__card_save-active {
-    margin: 10px 10px 137px 269px;
+    margin: 10px 0 0 269px;
   }
 
   .movies__card_delete {
-    margin: 10px 10px 137px 269px;
+    margin: 10px 0 0 269px;
   }
 
   .movies__card_poster {
@@ -158,7 +169,7 @@
   .movies__card_description {
     width: 300px;
     height: 15px;
-    margin: 16px 10px 0;
+    margin: 16px 0 0;
   }
 
   .movies__card_title-block {
@@ -175,6 +186,6 @@
   }
 
   .movies__card_duration {
-    margin: 3px 4px 0;
+    margin: 3px 0 0;
   }
 }

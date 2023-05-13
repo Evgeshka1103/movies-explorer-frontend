@@ -5,7 +5,7 @@ export default function NavProfile() {
   const location = useLocation();
 
   return (
-    <nav className="header__navigation_profile">
+    <nav className="navbar__header_navigation-profile">
       {(location.pathname === "/movies" ||
         location.pathname === "/saved-movies" ||
         location.pathname === "/profile") && (

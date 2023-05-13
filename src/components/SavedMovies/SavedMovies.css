@@ -5,45 +5,52 @@
   min-width: 320px;
 }
 
+.saved__movies_container{
+  padding: 0 70px;
+}
+
 .saved__movies_header {
-  width: 1280px;
+  width: 100%;
   height: 74px;
   display: flex;
 }
 
 .saved__movies_logo {
-  margin: 18px 0 0 70px;
+  margin: 18px 0 0 0;
+}
+
+.saved__movies_section{
+  padding: 0 70px;
 }
 
 .saved__movies_block {
-  width: 1280;
+  width: 100%;
   height: 140px;
 }
 
 @media screen and (max-width: 768px) {
-  .saved__movies_header {
-    width: 768px;
+  .saved__movies_container{
+    padding: 0 30px;
   }
 
   .saved__movies_logo {
-    margin: 18px 0 0 30px;
+    margin: 18px 0 0 0;
   }
 
-  .saved__movies_block {
-    width: 768px;
+  .saved__movies_section{
+    padding: 0 30px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .saved__movies_header {
-    width: 320px;
+  .saved__movies_container {
+    padding: 0 14px;
   }
 
   .saved__movies_logo {
-    margin: 18px 0 0 14px;
+    margin: 18px 0 0 0;
   }
-
-  .saved__movies_block {
-    width: 320px;
+  .saved__movies_section{
+    padding: 0 10px;
   }
 }

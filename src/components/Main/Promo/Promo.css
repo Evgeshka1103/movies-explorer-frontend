@@ -7,75 +7,94 @@
 
 
 .promo__image {
- padding: 87px 480px 129px;
-  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   z-index: 1;
+  width: 320px;
+  height: 320px;
+  margin: 87px auto 129px;
 }
 
 .promo__title {
-  padding: 196px 275px 224px;
+  display: flex;
+  align-items: center;
   text-align: center;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 50px;
   line-height: 58px;
   z-index: 2;
-  position: relative;
+  position: absolute;
   letter-spacing: -0.04em;
+  width: 730px;
+  justify-content: center;
+  top: 258px;
+  margin: 0;
+  left: 275px;
 }
 
-@media screen and (max-width: 1124px) {
-  .promo__image{
-    padding: 156px 402px 187px;
+@media screen and (max-width: 1040px) {
+  .promo__title{
+    width: 600px;
+    left: 170px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .promo__title{
+    left: 120px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .promo__image {
-    padding: 224px 224px 240px;
-  }
-
-  .promo__title {
-    padding: 326px 19px 342px;
-  }
-}
-
-@media screen and (max-width: 560px) {
   .promo__image{
-    padding: 260px 120px 280px;
+    margin: 224px auto 240px;
+  }
+  .promo__title{
+    width: 730px;
+    top: 326px;
+    left: 19px;
   }
 }
 
-@media screen and (max-width: 400px) {
-  .promo__image {
-    width: 248px;
-    height: 248px;
-    padding: 160px 60px 180px;
-  }
-
-  .promo__title {
-    padding: 170px 10 246px;
-    font-size: 31px;
-    line-height: 39px;
-    width: 380px;
-    height: 117px;
-    
+@media screen and (max-width: 750px) {
+  .promo__title{
+    width: 500px;
+    left: 50px;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 550px) {
+  .promo__title{
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 450px) {
 .promo__image {
     width: 248px;
     height: 248px;
-    padding: 142px 36px 180px;
   }
 
   .promo__title {
-    padding: 207px 10px 246px;
     font-size: 31px;
     line-height: 39px;
     width: 300px;
     height: 117px;
-    
+    left: 70px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .promo__title{
+    left: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .promo__title{
+    left: 10px;
   }
 }

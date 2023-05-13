@@ -39,23 +39,22 @@ export default function BurgerMenu(props) {
           ></div>
           <ul className="burger__menu_items">
             <li className="burger__menu_item">
-              <Link to="/" className="burger__menu_item-link">
+              <Link to="/" className="burger__menu_item-page">
                 Главная
               </Link>
             </li>
-            <li className="burger__menu_item">
-              <Link to="/movies" className="burger__menu_item-link">
+            <li className="burger__menu_item-movie">
+              <Link to="/movies" className="burger__menu_item-movies">
                 Фильмы
               </Link>
             </li>
-
-            <li className="burger__menu_item">
-              <Link to="/saved-movies" className="burger__menu_item-link">
+            <div className="burger__menu_line"></div>
+            <li className="burger__menu_item-saved">
+              <Link to="/saved-movies" className="burger__menu_item-movie">
                 Сохраненные фильмы
               </Link>
             </li>
           </ul>
-          <div className="burger__menu_line"></div>
           <ul className="burger__menu_acaunt">
             <li className="burger__menu_link-acaunt">
               <Link to="/profile" className="burger__menu_acaunt-text">

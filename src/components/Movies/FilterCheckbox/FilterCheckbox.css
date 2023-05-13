@@ -1,6 +1,6 @@
 .checkbox__block {
   height: 20px;
-  margin: 26px 70px 43px;
+  margin: 26px 0 43px;
   padding: 0;
   display: flex;
   align-items: center;
@@ -54,13 +54,13 @@
 
 @media screen and (max-width: 768px) {
   .checkbox__block {
-    margin: 26px 30px 51px;
+    margin: 26px 0 51px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .checkbox__block {
-    margin: 30px 14px 63px;
+    margin: 30px 0 63px;
   }
 
   .checkbox__filter {

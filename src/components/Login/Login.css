@@ -9,6 +9,7 @@
 }
 
 .login__container {
+  width: 100%;
   max-width: 396px;
   margin: 0 auto;
 }
@@ -22,7 +23,7 @@
 .login__title {
   margin: 0;
   padding-bottom: 40px;
-  width: 396px;
+  width: 100%;
   text-align: left;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 500;
@@ -50,8 +51,7 @@
 }
 
 .login__field {
-  width: 396px;
-  margin: auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-bottom: 13px;
@@ -71,7 +71,7 @@
 }
 
 .login__error {
-  width: 396px;
+  width: 100%;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: 10px;
   font-weight: 400;
@@ -83,7 +83,7 @@
 }
 
 .login__button {
-  width: 396px;
+  width: 100%;
   height: 45px;
   margin: 69px auto 16px;
   background: #000000;
@@ -97,6 +97,9 @@
   font-size: 14px;
   line-height: 17px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -146,54 +149,6 @@
   }
 }
 
-@media screen and (max-width: 404px) {
-  .login__container {
-    max-width: 300px;
-    margin: 0 auto;
-  }
-
-  .login__logo {
-    margin: 56px 111px 50px;
-  }
-
-  .login__title {
-    width: 300px;
-    padding-bottom: 80px;
-  }
-
-  .login__field {
-    width: 260px;
-  }
-
-  .login__button {
-    width: 300px;
-    margin: 245px 0 14px;
-  }
-
-  .login__register {
-    font-size: 12px;
-    line-height: 15px;
-    gap: 7px;
-    margin: 14px auto 30px;
-  }
-
-  .login__text_register {
-    width: 163px;
-    height: 15px;
-    margin: 0;
-    font-size: 12px;
-    line-height: 15px;
-  }
-
-  .login__login {
-    width: 76px;
-    font-size: 12px;
-    line-height: 15px;
-    height: 15px;
-    text-align: center;
-    margin: 0;
-  }
-}
 
 @media screen and (max-width: 320px) {
   .login__container {

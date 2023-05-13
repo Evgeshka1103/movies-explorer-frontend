@@ -8,6 +8,7 @@
   margin: 0;
   justify-content: center;
   list-style: none;
+  padding: 0;
 }
 
 .nav__tab_link {

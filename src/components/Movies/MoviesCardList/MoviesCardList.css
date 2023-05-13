@@ -1,26 +1,24 @@
 .movies__card_list {
   width: 100%;
   max-width: 1140px;
-  min-width: 320px;
-  padding: 0 70px;
+  min-width: 300px;
+  padding: 0;
   margin: 70px 0 12px;
   display: grid;
-  grid-template-columns: repeat(3, 360px);
-  gap: 43px 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 43px 30px;
 }
 
 @media screen and (max-width: 768px) {
   .movies__card_list {
     margin: 70px 0 12px;
-    grid-template-columns: repeat(2, 339px);
     gap: 47px 30px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 320px) {
   .movies__card_list {
     margin: 40px 0 12px;
-    grid-template-columns: 1fr;
     gap: 39px;
   }
 }

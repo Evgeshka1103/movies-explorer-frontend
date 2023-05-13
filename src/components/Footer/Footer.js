@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="footer">
+      <div className="footer__container">
       <h3 className="footer__project">
         Учебный проект Яндекс.Практикум х BeatFilm.
       </h3>
       <div className="footer__line"></div>
-      <div className="footer__container">
+      <div className="footer__block">
         <p className="footer__copyright">&copy;2023</p>
         <ul className="footer__links">
           <li className="footer__link">
@@ -22,7 +23,7 @@ export default function Footer() {
           </li>
           <li className="footer__link">
             <Link
-              className="footer__link_go"
+              className="footer__link_git"
               to="https://github.com/Evgeshka1103"
               target="_blank"
             >
@@ -30,6 +31,7 @@ export default function Footer() {
             </Link>
           </li>
         </ul>
+      </div>
       </div>
     </footer>
   );

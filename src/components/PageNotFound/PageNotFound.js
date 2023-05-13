@@ -8,6 +8,7 @@ export default function PageNotFound() {
 
   return (
     <div className="page__not-found">
+      <div className="pafe__not_container">
       <p className="page__not_title">404</p>
       <h7 className="page__not_subtitle">Страница не найдена</h7>
       <Link className="page__not_back">
@@ -15,6 +16,7 @@ export default function PageNotFound() {
           Назад
         </button>
       </Link>
+      </div>
     </div>
   );
 }

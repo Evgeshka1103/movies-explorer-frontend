@@ -1,11 +1,19 @@
 .page__not-found {
-    width: 1280px;
-    margin: 0;
+    width: 100%;
+    max-width: 1280px;
+    min-width: 320px;
+    margin: 0 auto;
     height: 700px;
+  }
+
+  .pafe__not_container{
+   width: 100%;
+   max-width: 400px;
+   margin: 0 auto;
   }
   
   .page__not_title {
-    width: 400px;
+    width: 100%;
     margin: 246px auto 5px;
     padding: 0;
     text-align: center;
@@ -17,7 +25,7 @@
   }
   
   .page__not_subtitle {
-    width: 400px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     padding: 0;
@@ -32,7 +40,7 @@
   
   .page__not_back {
     display: flex;
-    width: 400px;
+    width: 100%;
     margin: 184px auto 60px;
     text-align: center;
     justify-content: center;
@@ -52,7 +60,6 @@
   
   @media screen and (max-width: 768px) {
     .page__not-found {
-      width: 768px;
       height: 1024px;
     }
   
@@ -67,7 +74,6 @@
   
   @media screen and (max-width: 320px) {
     .page__not-found {
-      width: 320px;
       height: 780px;
     }
   

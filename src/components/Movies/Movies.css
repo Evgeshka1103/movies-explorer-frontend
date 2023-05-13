@@ -5,25 +5,33 @@
   min-width: 320px;
 }
 
-.header__movies {
-  width: 1280px;
+.movies__container{
+padding: 0 70px;
+}
+
+.movies__header{
+  width: 100%;
   height: 74px;
   display: flex;
 }
 
 .movies__logo {
-  margin: 18px 0 0 70px;
+  margin: 18px 0 0;
+}
+
+.movies__section{
+  padding: 0 70px;
 }
 
 .movies__block_button {
-  width: 1280px;
+  width: 100%;
   height: 166px;
 }
 
 .movies__buton_content {
-  width: 1140px;
+  width: 100%;
   height: 36px;
-  margin: 50px 70px 80px;
+  margin: 50px 0 80px;
   border: none;
   border-radius: 6px;
   font-family: "Inter", Arial, Helvetica, sans-serif;
@@ -36,47 +44,37 @@
 }
 
 @media screen and (max-width: 768px) {
-  .header__movies {
-    width: 768px;
-    height: 74px;
-    display: flex;
+  .movies__container{
+    padding: 0 30px;
   }
 
   .movies__logo {
-    margin: 15px 0 0 30px;
+    margin: 15px 0 0;
   }
 
-  .movies__block_button {
-    width: 768px;
-    height: 166px;
+  .movies__section{
+    padding: 0 30px;
   }
 
   .movies__buton_content {
-    width: 708px;
-    height: 36px;
-    margin: 50px 30px 80px;
+    margin: 50px 0 80px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .header__movies {
-    width: 320px;
-    height: 74px;
-    display: flex;
+  .movies__container {
+    padding: 0 14px;
   }
 
   .movies__logo {
-    margin: 15px 0 0 14px;
+    margin: 15px 0 0;
   }
 
-  .movies__block_button {
-    width: 320px;
-    height: 166px;
+  .movies__section{
+    padding: 0 10px;
   }
 
   .movies__buton_content {
-    width: 300px;
-    height: 36px;
-    margin: 50px 10px 80px;
+    margin: 50px 0 80px;
   }
 }
