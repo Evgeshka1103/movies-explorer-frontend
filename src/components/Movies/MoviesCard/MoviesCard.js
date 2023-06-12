@@ -7,35 +7,45 @@ export default function MoviesCard({ movie }) {
 
   return (
     <li className="movies__card">
-        <img
-          src={movie.thumbnail}
-          alt={movie.nameRU}
-          className="movies__card_poster"
-        />
+      <img
+        src={movie.thumbnail}
+        alt={movie.nameRU}
+        className="movies__card_poster"
+      />
+      {location.pathname === "/movies" && (
+        <button
+          type="button"
+          className={`movies__card_save ${
+            movie.favorite && "movies__card_save-active"
+          }`}
+        ></button>
+      )}
 
+      {location.pathname === "/saved-movies" && (
+        <button type="button" className="movies__card_delete"></button>
+      )}
       <div className="movies__card_description">
         <div className="movies__card_title-block">
           <h5 className="movies__card_title">{movie.nameRU}</h5>
-          </div>
+        </div>
         <div className="movies__card_duration-block">
           <p className="movies__card_duration">{movie.duration}</p>
         </div>
       </div>
+      
       {location.pathname === "/movies" && (
-          <button
-            type="button"
-            className={`movies__card_icon movies__card_save ${
-              movie.favorite && "movies__card_save-active"
-            }`}
-          ></button>
-        )}
+        <button
+          type="button"
+          className={`movies__card_save ${
+            movie.favorite && "movies__card_save-active"
+          }`}
+        ></button>
+      )}
 
-        {location.pathname === "/saved-movies" && (
-          <button
-            type="button"
-            className="movies__card_icon movies__card_delete"
-          ></button>
-        )}
+      {location.pathname === "/saved-movies" && (
+        <button type="button" className="movies__card_delete"></button>
+      )}
+    
     </li>
   );
 }

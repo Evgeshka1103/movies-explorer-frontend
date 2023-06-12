@@ -1,5 +1,5 @@
 .burger__menu_button {
-  background: url(../../images/burger-menu-open.png);
+  background: url(../../images/icon-burger-click.svg);
   border: none;
   background-repeat: no-repeat;
   width: 44px;
@@ -68,7 +68,7 @@
 }
 
 .burger__menu_icon-close {
-  background-image: url(../../images/icon-close.png);
+  background-image: url(../../images/icon_close.svg);
   background-repeat: no-repeat;
   width: 25px;
   height: 25px;
@@ -188,7 +188,7 @@
 
 .burger__menu_icon {
   justify-items: center;
-  background-image: url(../../images/icon.png);
+  background-image: url(../../images/myicon.svg);
   background-repeat: no-repeat;
   height: 11px;
   position: relative;

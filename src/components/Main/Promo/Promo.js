@@ -1,5 +1,5 @@
 import "./Promo.css";
-import landingLogo from "../../../images/landing-logo.png";
+import landingLogo from "../../../images/landing-logo.svg";
 import NavTab from "../NavTab/NavTab";
 
 export default function Promo() {

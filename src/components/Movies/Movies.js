@@ -1,6 +1,6 @@
 import "./Movies.css";
 import { Link } from "react-router-dom";
-import logo from "../../images/logo.png";
+import logo from "../../images/logo.svg";
 import NavProfile from "../NavProfile/NavProfile";
 import SearchForm from "./SearchForm/SearchForm";
 import MoviesCardList from "./MoviesCardList/MoviesCardList";

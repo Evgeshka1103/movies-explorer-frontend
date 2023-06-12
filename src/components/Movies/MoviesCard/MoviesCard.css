@@ -1,20 +1,78 @@
 .movies__card {
-  display: grid;
+  list-style: none;
   border-radius: 6px;
   width: 100%;
   max-width: 360px;
+  min-width: 300px;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
 }
 
 .movies__card_poster {
+  display: block;
   width: 100%;
   max-width: 360px;
-  /*height: 201px;*/
-  object-fit: contain;
+  height: 201px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.movies__card_save {
+  background-image: none;
+  background-color: transparent;
+  width: 72px;
+  height: 21px;
+  padding: 0;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  top: 14px;
+  right: 14px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.movies__card_save:hover {
+  background-image: url(../../../images/icon.svg);
+}
+
+.movies__card_save-active {
+  background-image: url(../../../images/icon-activ.svg);
+  min-width: 21px;
+  height: 21px;
+  padding: 0;
+  border: none;
+  background-position: 51px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: contain;
+ 
+}
+
+.movies__card_delete {
+  background-image: none;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: contain;
+  border: none;
+  padding: 0;
+  min-width: 21px;
+  height: 21px;
+  margin: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+
+.movies__card_delete:hover {
+  background-image: url(../../../images/icon-delete.svg);
 }
 
 .movies__card_description {
-  width: 332px;
-  height: 32px;
   display: flex;
   justify-content: space-between;
   margin: 14px 14px 0;
@@ -38,11 +96,10 @@
 }
 
 .movies__card_duration-block {
-  width: 52px;
+  min-width: 52px;
   height: 18px;
   background-color: #f9f9f9;
   text-align: center;
-  margin: 0 4px 0 0;
   border-radius: 3px;
 }
 
@@ -53,112 +110,31 @@
   font-size: 11px;
   line-height: 10px;
   color: #a0a0a0;
-  margin: 4px 4px 0;
-}
-
-.movies__card_icon {
-  background-color: transparent;
-  display: flex;
-  position: absolute;
-  min-width: 72px;
-  height: 21px;
-  padding: 0;
-  border-radius: 30px;
-  border: none;
-  cursor: pointer;
-  margin: 14px 0 0 274px;
-  background-size: contain;
-}
-
-.movies__card_save {
-  background-image: none;
-}
-
-.movies__card_save:hover {
-  background-image: url(../../../images/save-button.png);
-}
-
-.movies__card_save-active {
-  background-image: url(../../../images/save-ok.png);
-  min-width: 21px;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  background-size: contain;
-  margin: 14px 0 0 325px;
-  position: absolute;
-}
-
-.movies__card_delete {
-  background-image: none;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  background-size: contain;
-  border: none;
-  padding: 0;
-  min-width: 21px;
-  height: 21px;
-  position: absolute;
-  margin: 14px 0 0 325px;
-  cursor: pointer;
-}
-
-.movies__card_delete:hover {
-  background-image: url(../../../images/delete.png);
-}
-
-@media screen and (max-width: 1190px) {
-  .movies__card_poster{
-    max-width: 330px;
-  }
-
-  .movies__card_description{
-    margin: 14px 0 0;
-  }
-
-  .movies__card_duration-block{
-    margin: 0;
-  }
-
-  .movies__card_icon{
-    margin: 14px 0 0 244px;
-  }
-
-  .movies__card_save-active{
-    margin: 14px 0 0 295px;
-  }
-
-  .movies__card_delete{
-    margin: 14px 0 0 295px;
-  }
+  padding: 3px 4px;
+  margin: 0;
 }
 
 @media screen and (max-width: 768px) {
-  .movies__card_icon{
-    margin: 14px 0 0 253px;
+  .movies__card_description {
+    margin: 25px 0 0;
   }
-
-  .movies__card_save-active{
-    margin: 14px 0 0 304px;
-  }
-
-  .movies__card_delete{
-    margin: 14px 0 0 304px;
-  }
-  
 }
 
 @media screen and (max-width: 320px){
 
   .movies__card_icon {
-    margin: 10px 0 0 218px;
+    top: 10px;
+    right: 10px;
   }
 
   .movies__card_save-active {
-    margin: 10px 0 0 269px;
+    top: 10px;
+    right: 10px;
   }
 
   .movies__card_delete {
-    margin: 10px 0 0 269px;
+    top: 10px;
+    right: 10px;
   }
 
   .movies__card_poster {

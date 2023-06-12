@@ -132,27 +132,6 @@
   }
 }
 
-/*@media screen and (max-width: 420px) {
-  .profile__form {
-    width: 350px;
-  }
-
-  .profile__form_inputs {
-    min-width: 350px;
-  }
-
-  .profile__input_content {
-    width: 350px;
-  }
-
-  .profile__input{
-    margin-left: 85px;
-  }
-
-}*/
-
-
-
 @media screen and (max-width: 320px) {
   .profile__header{
     padding: 0 14px;
