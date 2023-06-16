@@ -1,0 +1,150 @@
+.footer {
+  width: 100%;
+  max-width: 1280px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.footer__container{
+  padding: 0 70px;
+}
+
+.footer__project {
+  padding-top: 79px;
+  margin: 0;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  color: #a0a0a0;
+}
+
+.footer__line {
+  width: 100%;
+  padding-top: 20px;
+  margin: 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.footer__block {
+  padding-top: 20px;
+  height: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.footer__copyright {
+  margin-top: 0;
+  margin-bottom: 20px;
+  width: 48px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #a0a0a0;
+}
+
+.footer__links {
+  display: flex;
+  width: 182px;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer__link-go {
+  display: flex;
+  width: 100%;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.footer__link-go:hover {
+  opacity: 0.5;
+}
+
+.footer__link-git {
+  display: flex;
+  width: 100%;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.footer__link_git:hover {
+  opacity: 0.5;
+}
+
+
+
+@media screen and (max-width: 768px) {
+.footer__container{
+  padding: 0 50px;
+}
+}
+
+@media screen and (max-width: 320px) {
+.footer__container{
+  padding: 0 10px;
+}
+
+  .footer__project {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .footer__block {
+    padding-top: 30px;
+    height: 107px;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding-bottom: 20px;
+  }
+
+  .footer__links {
+    display: flex;
+    width: 111px;
+    flex-direction: column;
+    margin: 0 auto;
+    list-style-type: none;
+    row-gap: 12px;
+    align-items: center;
+  }
+
+  .footer__link-go {
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0;
+  }
+
+  .footer__link-git {
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0 auto;
+  }
+
+  .footer__copyright {
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 102px;
+    position: absolute;
+  }
+}

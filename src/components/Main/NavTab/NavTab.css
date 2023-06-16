@@ -1,0 +1,37 @@
+.promo__nav-tab {
+  background: #000000;
+}
+
+.promo__nav-tab-block {
+  display: flex;
+  height: 66px;
+  margin: 0;
+  gap: 40px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.promo__nav-tab-link {
+  display: flex;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #ffffff;
+  padding-top: 24px;
+}
+
+@media screen and (max-width: 320px) {
+  .promo__nav-tab-block {
+    padding: 0 50px;
+    gap: 24px;
+  }
+
+  .promo__nav-tab-link {
+    width: 100%;
+    font-size: 11px;
+    padding-top: 25px;
+  }
+}
