@@ -18,51 +18,51 @@ export default function BurgerMenu(props) {
       <button
         className={
           props.loggedIn
-            ? "burger__menu_button"
-            : "burger__menu_button burger__menu_button_hidden"
+            ? "burger-menu__button"
+            : "burger-menu__button burger-menu__button-hidden"
         }
         onClick={handleOpenBurgerClick}
       />
       <div
-        className={isOpen ? "burger__menu burger__menu_active" : "burger__menu"}
+        className={isOpen ? "burger-menu burger-menu__active" : "burger-menu"}
       >
         <div
           className={
             isOpen
-              ? "burger__menu_container burger__menu_container_active"
-              : "burger__menu_container"
+              ? "burger-menu__container burger-menu__container-active"
+              : "burger-menu__container"
           }
         >
           <div
-            className="burger__menu_icon-close"
+            className="burger-menu__icon-close"
             onClick={handleCloseBurgerClick}
           ></div>
-          <ul className="burger__menu_items">
-            <li className="burger__menu_item">
-              <Link to="/" className="burger__menu_item-page">
+          <ul className="burger-menu__items">
+            <li className="burger-menu__item">
+              <Link to="/" className="burger-menu__item-page">
                 Главная
               </Link>
             </li>
-            <li className="burger__menu_item-movie">
-              <Link to="/movies" className="burger__menu_item-movies">
+            <li className="burger-menu__item-movie">
+              <Link to="/movies" className="burger-menu__item-movies">
                 Фильмы
               </Link>
             </li>
-            <div className="burger__menu_line"></div>
-            <li className="burger__menu_item-saved">
-              <Link to="/saved-movies" className="burger__menu_item-movie">
+            <div className="burger-menu__line"></div>
+            <li className="burger-menu__item-saved">
+              <Link to="/saved-movies" className="burger-menu__item-sav-movie">
                 Сохраненные фильмы
               </Link>
             </li>
           </ul>
-          <ul className="burger__menu_acaunt">
-            <li className="burger__menu_link-acaunt">
-              <Link to="/profile" className="burger__menu_acaunt-text">
+          <ul className="burger-menu__acaunt">
+            <li className="burger-menu__link-acaunt">
+              <Link to="/profile" className="burger-menu__acaunt-text">
                 Аккаунт
               </Link>
             </li>
-            <li className="burger__menu_acaunt-icon">
-              <div className="burger__menu_icon"></div>
+            <li className="burger-menu__acaunt-icon">
+              <div className="burger-menu__icon"></div>
             </li>
           </ul>
         </div>

@@ -1,4 +1,4 @@
-.saved__movies {
+.saved-movies {
   position: relative;
   width: 100%;
   max-width: 1280px;
@@ -6,58 +6,58 @@
   margin: 0 auto;
 }
 
-.saved__movies_container{
+.saved-movies__container{
   padding: 0 70px;
 }
 
-.saved__movies_header {
+.saved-movies__header {
   width: 100%;
   height: 74px;
   display: flex;
 }
 
-.saved__movies_logo {
+.saved-movies__logo {
   margin: 18px 0 0 0;
 }
 
-.saved__movies_section{
+.saved-movies__section{
   padding: 0 70px;
 }
 
-.saved__movies_block {
+.saved-movies__block {
   width: 100%;
   height: 140px;
 }
 
 @media screen and (max-width: 768px) {
-  .saved__movies_container{
+  .saved-movies__container{
     padding: 0 30px;
   }
 
-  .saved__movies_logo {
+  .saved-movies__logo {
     margin: 18px 0 0 0;
   }
 
-  .saved__movies_section{
+  .saved-movies__section{
     padding: 0 30px;
   }
 }
 
 @media screen and (max-width: 400px){
-  .saved__movies_section{
+  .saved-movies__section{
     padding: 0 10px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .saved__movies_container {
+  .saved-movies__container {
     padding: 0 14px;
   }
 
-  .saved__movies_logo {
+  .saved-movies__logo {
     margin: 18px 0 0 0;
   }
-  .saved__movies_section{
+  .saved-movies__section{
     padding: 0 10px;
   }
 }

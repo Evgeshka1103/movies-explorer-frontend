@@ -14,7 +14,7 @@
   margin-top: 100px;
 }
 
-.portfolio__list_links {
+.portfolio__list-links {
   margin-top: 50px;
   padding: 0;
   width: 100%;
@@ -28,7 +28,7 @@
   list-style-type: none;
 }
 
-.portfolio__link_project {
+.portfolio__link-project {
   width: 100%;
   max-width: 1140px;
   height: 50px;
@@ -46,23 +46,11 @@
   margin: 0;
 }
 
-.portfolio__link_project:hover {
+.portfolio__link-project:hover {
   opacity: 0.5;
 }
 
-/*.portfolio__text {
-  width: 100%;
-  font-family: "Inter", Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 30px;
-  line-height: 50px;
-  letter-spacing: -4%;
-  color: #000000;
-  margin: 0;
-}*/
-
-.portfolio__link_go {
+.portfolio__link-go {
   min-width: 29px;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: 30px;
@@ -74,7 +62,7 @@ color: #000000;
 
 }
 
-.portfolio__block_line {
+.portfolio__block-line {
   width: 100%;
   padding-top: 19px;
   margin: 0;
@@ -88,14 +76,14 @@ color: #000000;
     margin-bottom: 0;
   }
 
-  .portfolio__list_links {
+  .portfolio__list-links {
     margin-top: 50px;
     padding: 0;
     margin-bottom: 90px;
     font-size: 28px;
   }
 
-  .portfolio__link_go {
+  .portfolio__link-go {
     min-width: 27px;
     font-size: 28px;
   }
@@ -112,19 +100,19 @@ color: #000000;
     margin-top: 150px;
   }
 
-  .portfolio__link_project{
+  .portfolio__link-project{
     font-size: 28px;
   }
 }
 
 @media screen and (max-width: 550px) {
-  .portfolio__link_project{
+  .portfolio__link-project{
     font-size: 26px;
   }
 }
 
 @media screen and (max-width: 450px) {
-  .portfolio__link_project{
+  .portfolio__link-project{
     font-size: 23px;
   }
 }
@@ -135,19 +123,19 @@ color: #000000;
     margin-top: 170px;
   }
 
-  .portfolio__list_links {
+  .portfolio__list-links {
     margin-top: 40px;
     padding: 0;
     margin-bottom: 70px;
   }
 
-  .portfolio__link_project{
+  .portfolio__link-project{
     height: 28px;
     font-size: 18px;
     line-height: 28px;
   }
 
-  .portfolio__link_go{
+  .portfolio__link-go{
     min-width: 18px;
     font-size: 18px;
     line-height: 28px;

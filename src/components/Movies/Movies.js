@@ -23,8 +23,8 @@ export default function Movies({ movies }) {
         </div>
       <div className="movies__section">
         <MoviesCardList movies={movies} />
-        <div className="movies__block_button">
-          <button className="movies__buton_content">Ещё</button>
+        <div className="movies__block-button">
+          <button className="movies__buton-content">Ещё</button>
         </div>
       </div>
       <Footer />

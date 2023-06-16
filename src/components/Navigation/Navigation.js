@@ -5,17 +5,17 @@ export default function Navigation() {
   const location = useLocation();
 
   return (
-    <nav className="header__main_navigation">
+    <nav className="header-navigation">
       {location.pathname === "/" && (
         <>
-          <ul className="header__links_user">
-            <li className="header__link_register">
-              <Link to="/signup" className="header__link_register-text">
+          <ul className="header-links-user">
+            <li className="header-link-register">
+              <Link to="/signup" className="header-navigation__link-register-text">
                 Регистрация
               </Link>
             </li>
-            <li className="header__link_login">
-              <Link to="/signin" className="header__link_login-text">
+            <li className="header-link-login">
+              <Link to="/signin" className="header-navigation__link-login-text">
                 Войти
               </Link>
             </li>

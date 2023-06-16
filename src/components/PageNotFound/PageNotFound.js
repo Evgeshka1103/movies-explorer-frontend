@@ -7,12 +7,12 @@ export default function PageNotFound() {
   const returnActivePage = () => navigate(-1);
 
   return (
-    <div className="page__not-found">
-      <div className="pafe__not_container">
-      <p className="page__not_title">404</p>
-      <h7 className="page__not_subtitle">Страница не найдена</h7>
-      <Link className="page__not_back">
-        <button className="page__not_button-back" onClick={returnActivePage}>
+    <div className="page-not-found">
+      <div className="page-not-found__container">
+      <p className="page-not-found__title">404</p>
+      <h7 className="page-not-found__subtitle">Страница не найдена</h7>
+      <Link className="page-not-found__back">
+        <button className="page-not-found__button-back" onClick={returnActivePage}>
           Назад
         </button>
       </Link>

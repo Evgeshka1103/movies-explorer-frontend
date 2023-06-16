@@ -10,18 +10,18 @@ export default function FilterCheckbox({ onClick }) {
   };
 
   const checkboxClasses = !isActive
-    ? "checkbox__slider"
-    : `checkbox__slider checkbox__slider_active`;
+    ? "checkbox-block__slider"
+    : `checkbox-block__slider checkbox-block__slider_active`;
 
   return (
-    <div className="checkbox__block">
+    <div className="checkbox-block">
       <input
         type="checkbox"
         id="checkbox-slide"
         className={checkboxClasses}
         onChange={handleClick}
       />
-      <div className="checkbox__filter">Короткометражки</div>
+      <div className="checkbox-block__filter">Короткометражки</div>
     </div>
   );
 }

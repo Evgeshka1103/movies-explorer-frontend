@@ -10,11 +10,11 @@ import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 export default function SavedMovies({ movies }) {
   return (
-    <div className="saved__movies">
-      <div className="saved__movies_container">
-      <header className="saved__movies_header">
+    <div className="saved-movies">
+      <div className="saved-movies__container">
+      <header className="saved-movies__header">
         <Link to="/">
-          <img className="saved__movies_logo" src={logo} alt="Логотип" />
+          <img className="saved-movies__logo" src={logo} alt="Логотип" />
         </Link>
 
         <NavProfile />
@@ -22,11 +22,11 @@ export default function SavedMovies({ movies }) {
       </header>
       <SearchForm />
       </div>
-      <div className="saved__movies_section">
+      <div className="saved-movies__section">
       <MoviesCardList
         movies={movies.filter((movie) => movie.favorite === true)}
       />
-      <div className="saved__movies_block"></div>
+      <div className="saved-movies__block"></div>
       </div>
       <Footer />
     </div>

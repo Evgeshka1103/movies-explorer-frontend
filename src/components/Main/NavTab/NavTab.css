@@ -1,19 +1,19 @@
-.nav__tab {
+.promo__nav-tab {
   background: #000000;
 }
 
-.nav__tab_block {
+.promo__nav-tab-block {
   display: flex;
   height: 66px;
   margin: 0;
+  gap: 40px;
   justify-content: center;
   list-style: none;
   padding: 0;
 }
 
-.nav__tab_link {
+.promo__nav-tab-link {
   display: flex;
-  margin-right: 40px;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -24,13 +24,13 @@
 }
 
 @media screen and (max-width: 320px) {
-  .nav__tab_block {
+  .promo__nav-tab-block {
     padding: 0 50px;
+    gap: 24px;
   }
 
-  .nav__tab_link {
+  .promo__nav-tab-link {
     width: 100%;
-    margin-right: 24px;
     font-size: 11px;
     padding-top: 25px;
   }

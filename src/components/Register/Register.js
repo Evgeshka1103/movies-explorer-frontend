@@ -57,7 +57,7 @@ export default function Register() {
           <button className="auth__button">Зарегистрироваться</button>
         </form>
         <div className="auth__register">
-          <p className="auth__text_register">Уже зарегистрированы?</p>
+          <p className="auth__text-register">Уже зарегистрированы?</p>
           <Link to="/signin" className="auth__login">
             Войти
           </Link>

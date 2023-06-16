@@ -43,7 +43,7 @@ export default function Login() {
           <button className="login__button">Войти</button>
         </form>
         <div className="login__register">
-          <p className="login__text_register">Ещё не зарегистрированы?</p>
+          <p className="login__text-register">Ещё не зарегистрированы?</p>
           <Link className="login__login" to="/signup">
             Регистрация
           </Link>

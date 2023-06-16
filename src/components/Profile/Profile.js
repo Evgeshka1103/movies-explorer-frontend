@@ -18,8 +18,8 @@ export default function Profile() {
       <div className="profile__content">
         <h2 className="profile__title">Привет, Виталий!</h2>
         <form className="profile__form">
-          <fieldset className="profile__form_inputs">
-            <div className="profile__input_content">
+          <fieldset className="profile__form-inputs">
+            <div className="profile__input-content">
               <h5 className="profile__placeholder">Имя</h5>
               <input
                 className="profile__input"
@@ -33,7 +33,7 @@ export default function Profile() {
               />
             </div>
             <div className="profile__line"></div>
-            <div className="profile__input_content">
+            <div className="profile__input-content">
               <h5 className="profile__placeholder">E-mail</h5>
               <input
                 className="profile__input"
@@ -48,11 +48,11 @@ export default function Profile() {
             </div>
           </fieldset>
 
-          <div className="profile__block_buttons">
-            <button type="button" className="profile__edit_button">
+          <div className="profile__block-buttons">
+            <button type="button" className="profile__edit-button">
               Редактировать
             </button>
-            <Link to="/" className="profile__exit_button">
+            <Link to="/" className="profile__exit-button">
               Выйти из аккаунта
             </Link>
           </div>

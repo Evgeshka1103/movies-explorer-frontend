@@ -60,7 +60,7 @@
   list-style-type: none;
 }
 
-.footer__link_go {
+.footer__link-go {
   display: flex;
   width: 100%;
   font-family: "Inter", Arial, Helvetica, sans-serif;
@@ -72,11 +72,11 @@
   text-decoration: none;
 }
 
-.footer__link_go:hover {
+.footer__link-go:hover {
   opacity: 0.5;
 }
 
-.footer__link_git {
+.footer__link-git {
   display: flex;
   width: 100%;
   font-family: "Inter", Arial, Helvetica, sans-serif;
@@ -129,13 +129,13 @@
     align-items: center;
   }
 
-  .footer__link_go {
+  .footer__link-go {
     font-size: 12px;
     line-height: 15px;
     margin: 0;
   }
 
-  .footer__link_git {
+  .footer__link-git {
     font-size: 12px;
     line-height: 15px;
     margin: 0 auto;

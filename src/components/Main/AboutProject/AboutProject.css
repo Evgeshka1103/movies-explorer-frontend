@@ -1,15 +1,15 @@
-.about__project {
+.about-project {
   width: 100%;
   max-width: 1280px;
   min-width: 320px;
   margin: 0 auto;
 }
 
-.about__project_container {
+.about-project__container {
   padding: 0 70px;
 }
 
-.about__title {
+.about-project__title {
   padding-top: 110px;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 400;
@@ -20,19 +20,19 @@
   margin: 0;
 }
 
-.about__title_line {
+.about-project__title-line {
  
   width: 100%;
   padding-top: 27px;
   border-bottom: 1px solid #000000;
 }
 
-.about__project_blocks {
+.about-project__blocks {
   display: grid;
   margin-top: 66px;
 }
 
-.about__project_description {
+.about-project__description {
   display: grid;
   width: 100%;
   max-width: 1140px;
@@ -40,13 +40,13 @@
   column-gap: 40px;
 }
 
-.about__project_block {
+.about-project__block {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 26px;
 }
 
-.about__project_title {
+.about-project__subtitle {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -56,7 +56,7 @@
   margin: 0;
 }
 
-.about__project_text {
+.about-project__text {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -65,7 +65,7 @@
   margin: 0;
 }
 
-.about__project_plan {
+.about-project__plan {
   margin-top: 110px;
   width: 100%;
   max-width: 1140px;
@@ -74,7 +74,7 @@
   row-gap: 14px;
 }
 
-.about__plan_time-black {
+.about-project__plan-time-black {
   display: flex;
   height: 36px;
   font-family: "Inter", Arial, Helvetica, sans-serif;
@@ -90,7 +90,7 @@
   margin: 0;
 }
 
-.about__plan_time-grey {
+.about-project__plan-time-grey {
   display: flex;
   height: 36px;
   font-family: "Inter", Arial, Helvetica, sans-serif;
@@ -103,11 +103,10 @@
   justify-content: center;
   background-color: #f2f2f2;
   color: #000000;
-
   margin: 0;
 }
 
-.about__plan_parent {
+.about-project__plan-parent {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -119,81 +118,81 @@
 }
 
 @media screen and (max-width: 768px) {
-  .about__project_container {
+  .about-_ {
     padding: 0 50px;
   }
 
-  .about__title {
+  .about-project__title {
     padding-top: 90px;
   }
 
-  .about__title_line {
+  .about-project__title-line {
     padding-top: 23px;
   }
 
-  .about__project_description {
+  .about-project__description {
     width: 100%;
     max-width: 668px;
     column-gap: 30px;
   }
 
-  .about__project_block {
+  .about-project__block {
     row-gap: 22px;
   }
 
-  .about__project_text {
+  .about-project__text {
     font-size: 12px;
     line-height: 18px;
   }
 
-  .about__project_plan {
+  .about-project__plan {
     margin-top: 93px;
   }
 
-  .about__plan_parent {
+  .about-project__plan-parent {
     font-weight: 400;
     margin: 0 0 90px;
   }
 }
 
 @media screen and (max-width: 400px) {
-.about__project_container {
+.about-project__container {
     padding: 0 18px;
   }
 
-  .about__title {
+  .about-project__title {
     padding-top: 70px;
     font-size: 18px;
     line-height: 22px;
   }
 
-  .about__project_blocks {
+  .about-project__blocks {
     grid-template-columns: 1fr;
   }
 
-  .about__project_description {
+  .about-project__description {
     margin-top: 60px;
     grid-template-columns: 1fr;
     row-gap: 56px;
   }
 
-  .about__project_block {
+  .about-project__block {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 16px;
   }
 
-  .about__project_title {
+  .about-project__subtitle {
     font-size: 18px;
     line-height: 22px;
   }
 
-  .about__project_text {
+  .about-project__text {
     font-size: 11px;
     line-height: 16px;
   }
 
-  .about__project_plan {
+  .about-project__plan {
     margin-top: 60px;
     margin-bottom: 70px;
     width: 100%;
@@ -202,7 +201,7 @@
     row-gap: 10px;
   }
 
-  .about__plan_time-black {
+  .about-project__plan-time-black {
     height: 35px;
     font-size: 11px;
     line-height: 13px;
@@ -210,7 +209,7 @@
     width: 100%;
   }
 
-  .about__plan_time-grey {
+  .about-project__plan-time-grey {
     height: 35px;
     font-size: 11px;
     line-height: 13px;
@@ -218,7 +217,7 @@
     width: 100%;
   }
 
-  .about__plan_parent {
+  .about-project__plan-parent {
     font-size: 11px;
     line-height: 13px;
   }

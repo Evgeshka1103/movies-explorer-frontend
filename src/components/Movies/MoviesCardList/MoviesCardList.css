@@ -1,4 +1,4 @@
-.movies__card_list {
+.movies-card-list {
   width: 100%;
   max-width: 1140px;
   justify-items: center;
@@ -11,14 +11,14 @@
 }
 
 @media screen and (max-width: 768px) {
-  .movies__card_list {
+  .movies-card-list {
     margin: 70px 0 12px;
     gap: 47px 30px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .movies__card_list {
+  .movies-card-list {
     margin: 40px 0 12px;
     gap: 39px;
   }

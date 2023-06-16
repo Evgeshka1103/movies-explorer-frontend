@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 1280px;
   height: 700px;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .profile__header {
@@ -42,7 +42,7 @@
   gap: 16px;
 }
 
-.profile__form_inputs {
+.profile__form-inputs {
   width: 100%;
   max-width: 410px;
   padding: 0;
@@ -50,7 +50,7 @@
   border: none;
 }
 
-.profile__input_content {
+.profile__input-content {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -88,7 +88,7 @@
   border-bottom: 1px solid #e8e8e8;
 }
 
-.profile__block_buttons {
+.profile__block-buttons {
   width: 100%;
   margin: 203px auto 70px;
   display: flex;
@@ -96,7 +96,7 @@
   gap: 16px;
 }
 
-.profile__edit_button {
+.profile__edit-button {
   width: 100%;
   padding: 0;
   border: none;
@@ -110,7 +110,7 @@
   color: #000000;
 }
 
-.profile__exit_button {
+.profile__exit-button {
   width: 100%;
   padding: 0;
   text-align: center;
@@ -157,11 +157,11 @@
     gap: 10px;
   }
 
-  .profile__form_inputs {
+  .profile__form-inputs {
     min-width: 260px;
   }
 
-  .profile__input_content {
+  .profile__input-content {
     width: 260px;
   }
 
@@ -174,16 +174,16 @@
     margin-left: 10px;
   }
 
-  .profile__block_buttons {
+  .profile__block-buttons {
     width: 260px;
     margin: 360px auto 40px;
   }
 
-  .profile__edit_button {
+  .profile__edit-button {
     width: 260px;
   }
 
-  .profile__exit_button {
+  .profile__exit-button {
     width: 260px;
   }
 }

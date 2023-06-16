@@ -7,11 +7,11 @@ export default function SearchForm() {
 
   return (
     <section className="search">
-      <div className="search__block_form">
+      <div className="search__block-form">
         <form className="search__form">
-          <div className="search__form_block-input">
+          <div className="search__form-block-input">
             <input
-              className="search__form_input"
+              className="search__form-input"
               onChange={handleChange}
               value={"Фильм"}
               type="text"

@@ -1,18 +1,9 @@
-.navbar__header_navigation-profile {
+.navbar-header-navigation-profile {
   width: 100%;
   display: flex;
 }
 
-.navbar__profile {
-  display: flex;
-  margin: 21px 0 23px auto;
-  padding: 0;
-  list-style: none;
-  align-items: center;
-  gap: 13px;
-}
-
-.navbar__links_profile-movie {
+.navbar-links-profile-movie {
   display: flex;
   padding: 0;
   margin: 28px auto 28px 44px;
@@ -20,7 +11,7 @@
   list-style: none;
 }
 
-.navbar__link-movie {
+.navbar-link {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -30,7 +21,7 @@
   text-decoration: none;
 }
 
-.navbar__link-movies {
+.navbar-link-sav-movies {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -40,7 +31,7 @@
   text-decoration: none;
 }
 
-.navbar__profile_acaunt {
+.navbar-profile-acaunt {
   display: flex;
   list-style: none;
   padding: 0;
@@ -48,12 +39,12 @@
   gap: 13px;
 }
 
-.navbar__link_acaunt {
+.navbar-link-acaunt {
   width: 57px;
   margin: 7px 0;
 }
 
-.navbar__link_acaunt-text {
+.navbar-link-acaunt-text {
   text-decoration: none;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 500;
@@ -63,13 +54,13 @@
   color: #000000;
 }
 
-.navbar__link_acaunt-icon {
+.navbar-link-acaunt-icon {
   width: 30px;
   background: #f9f9f9;
   border-radius: 6px;
 }
 
-.navbar__icon {
+.navbar-icon {
   justify-items: center;
   background-image: url(../../images/myicon.svg);
   background-repeat: no-repeat;
@@ -80,13 +71,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  .navbar__header_navigation-profile {
+  .navbar-header-navigation-profile {
     display: none;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .navbar__header_navigation-profile {
+  .navbar-header-navigation-profile {
     display: none;
   }
 }

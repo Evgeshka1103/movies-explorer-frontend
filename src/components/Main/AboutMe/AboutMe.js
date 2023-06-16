@@ -5,16 +5,16 @@ import Portfolio from "../Portfolio/Portfolio";
 
 export default function AboutMe() {
   return (
-    <section id="about-me" className="about__me">
-      <div className="about__me_container">
-        <h4 className="about__me_title">Студент</h4>
-        <div className="about__me_line"></div>
-        <div className="about__me_block">
-          <img src={photo} alt="Фотография" className="about__me_photo" />
-          <div className="about__me_block-student">
-            <h5 className="about__me_name">Евгения</h5>
-            <h6 className="about__me_about">Фронтенд-разработчик, 28 лет</h6>
-            <p className="about__me_info">
+    <section id="about-me" className="about-me">
+      <div className="about-me__container">
+        <h4 className="about-me__title">Студент</h4>
+        <div className="about-me__title-line"></div>
+        <div className="about-me__block">
+          <img src={photo} alt="Фотография" className="about-me__photo" />
+          <div className="about-me__block-student">
+            <h5 className="about-me__name">Евгения</h5>
+            <h6 className="about-me__about">Фронтенд-разработчик, 28 лет</h6>
+            <p className="about-me__info">
               Привет! Меня зовут Евгения, мне 28 лет, родилась и проживаю в
               городе Смоленск. На данный момент я мама в декрете, у нас с мужем
               растет замечательная дочь. Не так давно решила пройти обучение и
@@ -23,7 +23,7 @@ export default function AboutMe() {
               получается.
             </p>
             <Link
-              className="about__me_link"
+              className="about-me__link"
               to="https://github.com/Evgeshka1103"
               target="_blank"
             >

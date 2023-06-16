@@ -14,7 +14,7 @@ export default function Footer() {
         <ul className="footer__links">
           <li className="footer__link">
             <Link
-              className="footer__link_go"
+              className="footer__link-go"
               to="https://practicum.yandex.ru"
               target="_blank"
             >
@@ -23,7 +23,7 @@ export default function Footer() {
           </li>
           <li className="footer__link">
             <Link
-              className="footer__link_git"
+              className="footer__link-git"
               to="https://github.com/Evgeshka1103"
               target="_blank"
             >

@@ -5,31 +5,31 @@ export default function NavProfile() {
   const location = useLocation();
 
   return (
-    <nav className="navbar__header_navigation-profile">
+    <nav className="navbar-header-navigation-profile">
       {(location.pathname === "/movies" ||
         location.pathname === "/saved-movies" ||
         location.pathname === "/profile") && (
         <>
-          <ul className="navbar__links_profile-movie">
-            <li className="navbar__link_movie">
-              <Link to="/movies" className="navbar__link-movie">
+          <ul className="navbar-links-profile-movie">
+            <li className="navbar-link-movie">
+              <Link to="/movies" className="navbar-link">
                 Фильмы
               </Link>
             </li>
-            <li className="navbar__link_mowies">
-              <Link to="/saved-movies" className="navbar__link-movies ">
+            <li className="navbar-link-mowies">
+              <Link to="/saved-movies" className="navbar-link-sav-movies ">
                 Сохраненные фильмы
               </Link>
             </li>
           </ul>
-          <ul className="navbar__profile_acaunt">
-            <li className="navbar__link_acaunt">
-              <Link to="/profile" className="navbar__link_acaunt-text">
+          <ul className="navbar-profile-acaunt">
+            <li className="navbar-link-acaunt">
+              <Link to="/profile" className="navbar-link-acaunt-text">
                 Аккаунт
               </Link>
             </li>
-            <li className="navbar__link_acaunt-icon">
-              <div className="navbar__icon"></div>
+            <li className="navbar-link-acaunt-icon">
+              <div className="navbar-icon"></div>
             </li>
           </ul>
         </>
