@@ -12,7 +12,7 @@ import Preloader from "../Movies/Preloader/Preloader";
 export default function Movies({
   movies,
   setMovies,
-  searchMovie,
+  searchMovies,
   savedMovies,
   setSavedMovies,
   handleSaveMovies,
@@ -23,7 +23,7 @@ export default function Movies({
 }) {
   const [isSearchform, setIsSearchform] = useState(false);
   const [inputValue, setInputValue] = useState(
-    "" || localStorage.getItem('textSearch')
+    "" || localStorage.getItem("textSearch")
   );
 
   useEffect(() => {
@@ -59,7 +59,7 @@ export default function Movies({
     e.preventDefault();
     setIsSearchform(true);
     setTimeout(() => setIsSearchform(false), 1000);
-    setTimeout(() => searchMovie(inputValue), 1001);
+    setTimeout(() => searchMovies(inputValue), 1001);
     localStorage.setItem("searchText", inputValue);
     console.log(inputValue);
   }
@@ -77,7 +77,8 @@ export default function Movies({
         </header>
         <SearchForm
           setIsSearched={isSearchform}
-          searchMovie={searchMovie}
+          searchMovies={searchMovies}
+
           checkbox={checkbox}
           setCheckbox={setCheckbox}
           onChange={handleSearchForm}

@@ -98,6 +98,7 @@ export default function App() {
     localStorage.clear();
     setSearchedMovies([]);
     setMovies([]);
+    setSavedMovies([]);
     setIsLoggedIn(false);
     setCurrentUser({});
     return navigate("/", { replace: true });
@@ -273,6 +274,7 @@ export default function App() {
                 <>
                   <Movies
                     movies={movies}
+                    searchMovies={searchMovies}
                     setMovies={setMovies}
                     searchedMovies={searchedMovies}
                     checkbox={checkbox}
@@ -294,6 +296,7 @@ export default function App() {
                 <>
                   <SavedMovies
                     movies={savedMovies}
+                    searchMovies={searchMovies}
                     setMovies={setMovies}
                     searchedMovies={searchedMovies}
                     savedMovies={savedMovies}

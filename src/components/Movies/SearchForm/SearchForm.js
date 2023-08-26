@@ -3,29 +3,37 @@ import FilterCheckbox from "../FilterCheckbox/FilterCheckbox";
 import { useLocation } from "react-router-dom";
 import React from "react";
 
-export default function SearchForm({ onSubmit, onChange, checkbox, setCheckbox, checkSavedMovies, setCheckSavedMovies }) {
-
+export default function SearchForm({
+  onSubmit,
+  onChange,
+  searchMovies,
+  checkbox,
+  setCheckbox,
+  checkSavedMovies,
+  setCheckSavedMovies,
+}) {
   const location = useLocation();
 
   function handleCheckbox() {
-    if (location.pathname === '/movies') {
+    if (location.pathname === "/movies") {
       setCheckbox(!checkbox);
-      localStorage.setItem('checkboxData', JSON.stringify(!checkbox));
+      localStorage.setItem("checkboxData", JSON.stringify(!checkbox));
     }
-    if (location.pathname === '/saved-movies') {
+    if (location.pathname === "/saved-movies") {
       setCheckSavedMovies(!checkSavedMovies);
-      localStorage.setItem('savedCheckboxData', JSON.stringify(!checkSavedMovies));
+      localStorage.setItem(
+        "savedCheckboxData",
+        JSON.stringify(!checkSavedMovies)
+      );
     }
-  };
+  }
 
-  const item = location.pathname === '/movies'
-  ? checkbox
-  : checkSavedMovies;
+  const item = location.pathname === "/movies" ? checkbox : checkSavedMovies;
 
   const setSearchValue = () => {
-    return location.pathname === '/movies'
-    ? localStorage.getItem('textSearch')
-    : localStorage.getItem('savedTextSearch');
+    return location.pathname === "/movies"
+      ? localStorage.getItem("textSearch")
+      : localStorage.getItem("savedTextSearch");
   };
 
   return (
@@ -40,7 +48,7 @@ export default function SearchForm({ onSubmit, onChange, checkbox, setCheckbox, 
               type="text"
               placeholder="Фильм"
               name="movie"
-              defaultValue = {setSearchValue() || ''}
+              defaultValue={setSearchValue() || ""}
               required={false}
             />
           </div>
@@ -49,7 +57,12 @@ export default function SearchForm({ onSubmit, onChange, checkbox, setCheckbox, 
           </button>
         </form>
 
-        <FilterCheckbox onClick={handleCheckbox} defaultChecked={item} checkSavedMovies={checkSavedMovies} setCheckSavedMovies={setCheckSavedMovies}/>
+        <FilterCheckbox
+          onClick={handleCheckbox}
+          defaultChecked={item}
+          checkSavedMovies={checkSavedMovies}
+          setCheckSavedMovies={setCheckSavedMovies}
+        />
       </div>
       <div className="search__line"></div>
     </section>
