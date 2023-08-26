@@ -292,7 +292,6 @@ export default function App() {
             element={
               <ProtectedRoute isLoggedIn={token}>
                 <>
-                  <Header isLoggedIn={token} />
                   <SavedMovies
                     movies={savedMovies}
                     setMovies={setMovies}
@@ -304,7 +303,6 @@ export default function App() {
                     searchError={searchError}
                     setSearchError={setSearchError}
                   />
-                  <Footer />
                 </>
               </ProtectedRoute>
             }
@@ -319,7 +317,6 @@ export default function App() {
             element={
               <ProtectedRoute isLoggedIn={token}>
                 <>
-                  <Header isLoggedIn={token} />
                   <Profile
                     isLoggedIn={isLoggedIn}
                     name={currentUser.name}

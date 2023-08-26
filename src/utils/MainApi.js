@@ -5,7 +5,7 @@ class Api {
   }
 
   //проверка
-  _checkResponse(res) {
+  _checkGetResponse(res) {
     if (res.ok) {
       return res.json();
     }
@@ -29,7 +29,7 @@ class Api {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-    }).then(this._checkResponse);
+    }).then(this._checkGetResponse);
   };
 
   //Загрузка информации о пользователе с сервера
@@ -37,7 +37,7 @@ class Api {
     return fetch(`${this._baseUrl}/users/me`, {
       method: "GET",
       headers: this._checkToken(this._headers),
-    }).then(this._checkResponse);
+    }).then(this._checkGetResponse);
   }
 
   //Редактирование профиля
@@ -49,14 +49,14 @@ class Api {
         name: name,
         about: email,
       }),
-    }).then(this._checkResponse);
+    }).then(this._checkGetResponse);
   }
 
   getSavedMovies() {
     return fetch(`${this._baseUrl}/movies`, {
       method: "GET",
       headers: this._checkToken(this._headers),
-    }).then(this._checkResponse);
+    }).then(this._checkGetResponse);
   }
 
   //Сохранить фильм
@@ -94,7 +94,7 @@ class Api {
         nameEN: nameEN === "" ? nameRU : nameEN,
         movieId: id,
       }),
-    }).then(this._checkResponse);
+    }).then(this._checkGetResponse);
   }
 
   //Удаление фильма
@@ -102,7 +102,7 @@ class Api {
     return fetch(`${this._baseUrl}/movies/${id}`, {
       method: "DELETE",
       headers: this._checkToken(this._headers),
-    }).then(this._checkResponse);
+    }).then(this._checkGetResponse);
   }
 }
 
