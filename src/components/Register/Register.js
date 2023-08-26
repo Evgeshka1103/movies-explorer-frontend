@@ -9,7 +9,7 @@ export default function Register({ handleRegister }) {
 
   function handleFormSubmit(e) {
     e.preventDefault();
-    handleRegister(values.name, values.email, values.password);
+    handleRegister(values.email, values.password, values.name);
   }
 
   return (

@@ -53,9 +53,9 @@ export default function App() {
     }
   }, [token]);
 
-  const handleRegister = (name, email, password) => {
+  const handleRegister = (email, password, name) => {
     auth
-      .register(name, email, password)
+      .register(email, password, name)
       .then(() => {
         handleLogin(email, password);
       })

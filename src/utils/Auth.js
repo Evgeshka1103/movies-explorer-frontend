@@ -10,13 +10,13 @@ function onResponse(response) {
 }
 
 //регистрация
-export const register = (name, email, password) => {
+export const register = (email, password, name) => {
   return fetch(`${BASE_URL}/signup`, {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'
       },
-      body: JSON.stringify({name, email, password })
+      body: JSON.stringify({email, password, name })
   })
       .then((res) => onResponse(res));
 }
