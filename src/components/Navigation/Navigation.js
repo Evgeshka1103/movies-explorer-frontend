@@ -1,16 +1,19 @@
 import "./Navigation.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+import React from "react";
 
-export default function Navigation() {
-  const location = useLocation();
+export default function Navigation({ type }) {
 
   return (
     <nav className="header-navigation">
-      {location.pathname === "/" && (
+      {type !== "loggedIn" && (
         <>
           <ul className="header-links-user">
             <li className="header-link-register">
-              <Link to="/signup" className="header-navigation__link-register-text">
+              <Link
+                to="/signup"
+                className="header-navigation__link-register-text"
+              >
                 Регистрация
               </Link>
             </li>

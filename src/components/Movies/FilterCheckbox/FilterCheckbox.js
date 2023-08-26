@@ -1,8 +1,20 @@
 import "./FilterCheckbox.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router";
 
 export default function FilterCheckbox({ onClick }) {
-  const [isActive, setIsActive] = useState(true);
+  const [isActive, setIsActive] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    if ((location.pathname === '/saved-movies') && (localStorage.getItem('savedCheckboxData') === 'true')) {
+      setIsActive(true);
+    } else if ((location.pathname === '/movies') && (localStorage.getItem('checkboxData') === 'true')) {
+      setIsActive(true);
+    } else {
+      setIsActive(false);
+    }
+  }, [location.pathname])
 
   const handleClick = () => {
     setIsActive(!isActive);

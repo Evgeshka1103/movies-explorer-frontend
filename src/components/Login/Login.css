@@ -103,6 +103,12 @@
   text-align: center;
 }
 
+.login__button_disabled{
+  background-color: white;
+  color: gray;
+  cursor: none;
+}
+
 .login__register {
   display: flex;
   height: 17px;

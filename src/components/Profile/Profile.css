@@ -82,6 +82,17 @@
   border: none;
 }
 
+.profile__error {
+  width: 100%;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #ff4062;
+}
+
 .profile__line {
   width: 100%;
   margin: 0 auto;
@@ -108,6 +119,12 @@
   font-size: 13px;
   line-height: 16px;
   color: #000000;
+  cursor: pointer;
+}
+
+.profile__edit-button-disabled{
+color: grey;
+cursor: none;
 }
 
 .profile__exit-button {
