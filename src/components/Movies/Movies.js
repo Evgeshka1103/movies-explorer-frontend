@@ -76,7 +76,7 @@ export default function Movies({
           <BurgerMenu />
         </header>
         <SearchForm
-          setIsSearched={isSearchform}
+          setIsSearchform={isSearchform}
           searchMovies={searchMovies}
 
           checkbox={checkbox}

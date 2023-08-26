@@ -20,7 +20,7 @@ export default function SavedMovies({
   checkSavedMovies,
   setCheckSavedMovies,
 }) {
-  const [isSearchForm, setIsSearchForm] = useState(false);
+  const [isSearchform, setIsSearchform] = useState(false);
   const [inputValue, setInputValue] = useState(
     "" || localStorage.getItem("savedTextSearch")
   );
@@ -49,8 +49,8 @@ export default function SavedMovies({
 
   function handleFormSubmit(e) {
     e.preventDefault();
-    setIsSearchForm(true);
-    setTimeout(() => setIsSearchForm(false), 1000);
+    setIsSearchform(true);
+    setTimeout(() => setIsSearchform(false), 1000);
     setTimeout(() => searchMovies(inputValue), 1001);
     localStorage.setItem("savedTextSearch", inputValue);
   }
@@ -68,7 +68,7 @@ export default function SavedMovies({
         </header>
         <SearchForm
           searchMovies={searchMovies}
-          setIsSearchForm={setIsSearchForm}
+          setIsSearchform={setIsSearchform}
           checkSavedMovies={checkSavedMovies}
           setCheckSavedMovies={setCheckSavedMovies}
           onChange={handleSearchForm}
