@@ -85,7 +85,7 @@ export default function SavedMovies({
         </span>
       </div>
       <div className="saved-movies__section">
-        {isSearchForm ? (
+        {isSearchform ? (
           <Preloader />
         ) : (
           <MoviesCardList
