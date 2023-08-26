@@ -47,7 +47,7 @@ class Api {
       headers: this._checkToken(this._headers),
       body: JSON.stringify({
         name: data.name,
-        about: data.email,
+        email: data.email,
       }),
     }).then(this._checkGetResponse);
   }
