@@ -52,7 +52,7 @@ class Api {
     }).then(this._checkGetResponse);
   }
 
-  getSavedMovies() {
+  getSavedMovies(token) {
     return fetch(`${this._baseUrl}/movies`, {
       method: "GET",
       headers: this._checkToken(this._headers),
