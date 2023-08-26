@@ -80,9 +80,9 @@ export default function App() {
       });
   };
 
-  const handleUpdateUser = (name, email) => {
+  const handleUpdateUser = (data) => {
     mainApi
-      .patchUserInfoData(name, email)
+      .patchUserInfoData(data)
       .then((data) => {
         setCurrentUser(data);
         localStorage.setItem("currentUser", JSON.stringify(data));

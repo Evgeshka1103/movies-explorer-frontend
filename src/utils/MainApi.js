@@ -41,13 +41,13 @@ class Api {
   }
 
   //Редактирование профиля
-  patchUserInfoData({ name, email }) {
+  patchUserInfoData(data) {
     return fetch(`${this._baseUrl}/users/me`, {
       method: "PATCH",
       headers: this._checkToken(this._headers),
       body: JSON.stringify({
-        name: name,
-        about: email,
+        name: data.name,
+        about: data.email,
       }),
     }).then(this._checkGetResponse);
   }
