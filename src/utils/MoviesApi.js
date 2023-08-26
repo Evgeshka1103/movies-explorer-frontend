@@ -5,7 +5,7 @@ class MoviesApi {
   }
 
   //проверка
-  _checkResponse(res) {
+  _checkMoviesResponse(res) {
      if (res.ok) {
         return res.json();
      }
@@ -28,7 +28,7 @@ class MoviesApi {
         'Content-Type': 'application/json'
       }
     })
-    .then(this._checkResponse);
+    .then(this._checkMoviesResponse);
   }
 };
 
