@@ -108,7 +108,7 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: 'http://localhost:3000',
+  baseUrl: 'http://api.drevgeniya.nomoredomains.work',
   headers: {
      'Content-Type': 'application/json'
   }
