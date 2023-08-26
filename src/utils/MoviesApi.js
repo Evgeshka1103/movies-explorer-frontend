@@ -12,6 +12,15 @@ class MoviesApi {
      return Promise.reject(`Ошибка: ${res.status}`);
   }
 
+  _checkToken = (headers) => {
+    const token = localStorage.getItem('jwt');
+
+    if (token) {
+      headers['authorization'] = `Bearer ${token}`;
+    }
+    return headers;
+  };
+
   getMovies() {
     return fetch(`${this._baseUrl}/beatfilm-movies`, {
       method: 'GET',
