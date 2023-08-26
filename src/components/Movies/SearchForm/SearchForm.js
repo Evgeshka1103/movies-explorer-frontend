@@ -7,6 +7,7 @@ export default function SearchForm({
   onSubmit,
   onChange,
   searchMovies,
+  setIsSearched,
   checkbox,
   setCheckbox,
   checkSavedMovies,
@@ -27,8 +28,6 @@ export default function SearchForm({
       );
     }
   }
-
-  const item = location.pathname === "/movies" ? checkbox : checkSavedMovies;
 
   const setSearchValue = () => {
     return location.pathname === "/movies"
@@ -59,7 +58,7 @@ export default function SearchForm({
 
         <FilterCheckbox
           onClick={handleCheckbox}
-          defaultChecked={item}
+          defaultChecked={checkbox}
           checkSavedMovies={checkSavedMovies}
           setCheckSavedMovies={setCheckSavedMovies}
         />

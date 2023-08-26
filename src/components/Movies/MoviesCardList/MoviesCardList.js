@@ -4,7 +4,7 @@ import MoviesCard from "../MoviesCard/MoviesCard";
 import { useLocation } from "react-router";
 
 
-export default function MoviesCardList({ movies, className, onClick, savedMovies, setSavedMovies,  handleSaveMovies, checkbox, checkSavedCards }) {
+export default function MoviesCardList({ movies, className, onClick, savedMovies, setSavedMovies,  handleSaveMovies, checkbox, checkSavedMovies }) {
 
   const location = useLocation();
   const windowSize = document.documentElement.clientWidth;
@@ -15,7 +15,7 @@ export default function MoviesCardList({ movies, className, onClick, savedMovies
       return ((card.duration <= 40 && checkbox) || !checkbox) ? card : null;
     }
     if (location.pathname === '/saved-movies') {
-      return ((card.duration <= 40 && checkSavedCards) || !checkSavedCards) ? card : null;
+      return ((card.duration <= 40 && checkSavedMovies) || !checkSavedMovies) ? card : null;
     }
   });
 

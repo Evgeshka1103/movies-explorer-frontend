@@ -39,7 +39,7 @@ export default function App() {
   const [checkbox, setCheckbox] = useState(false);
   const [isCheckBoxOpen, setIsCheckBoxOpen] = useState(false);
   const [searchError, setSearchError] = useState(false);
-  const [checkSavedCards, setCheckSavedCards] = useState(false);
+  const [checkSavedMovies, setCheckSavedMovies] = useState(false);
 
   useEffect(()=> {
     if (token) {
@@ -301,8 +301,8 @@ export default function App() {
                     searchedMovies={searchedMovies}
                     savedMovies={savedMovies}
                     setSavedMovies={setSavedMovies}
-                    checkSavedCards={checkSavedCards}
-                    setCheckSavedCards={setCheckSavedCards}
+                    checkSavedMovies={checkSavedMovies}
+                    setCheckSavedMovies={setCheckSavedMovies}
                     searchError={searchError}
                     setSearchError={setSearchError}
                   />
