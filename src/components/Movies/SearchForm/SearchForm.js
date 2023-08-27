@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import React from "react";
 
 export default function SearchForm({
-  onSubmit,
+  handleFormSubmit,
   onChange,
   searchMovies,
   setIsSearched,
@@ -50,7 +50,7 @@ export default function SearchForm({
               required={false}
             />
           </div>
-          <button className="search__button" type="submit" onSubmit={onSubmit}>
+          <button className="search__button" type="submit" onSubmit={handleFormSubmit}>
             Поиск
           </button>
         </form>
