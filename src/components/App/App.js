@@ -9,12 +9,9 @@ import Movies from "../Movies/Movies";
 import SavedMovies from "../SavedMovies/SavedMovies";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import PageNotFound from "../PageNotFound/PageNotFound";
-import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import InfoTooltip from "../Popup/PopupErr";
-import Navigation from "../Navigation/Navigation";
-import NavProfile from "../NavProfile/NavProfile";
 import PopupErr from "../Popup/PopupErr";
 
 import { CurrentUserContext } from "../../Context/CurreentUserContext";
@@ -26,7 +23,7 @@ import moviesApi from "../../utils/MoviesApi";
 export default function App() {
   const location = useLocation();
   const navigate = useNavigate();
-  const token = localStorage.getItem('jwt');
+  const token = localStorage.getItem("jwt");
 
   const [currentUser, setCurrentUser] = useState({});
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -41,15 +38,16 @@ export default function App() {
   const [searchError, setSearchError] = useState(false);
   const [checkSavedMovies, setCheckSavedMovies] = useState(false);
 
-  useEffect(()=> {
+  useEffect(() => {
     if (token) {
-    mainApi.checkTokenOnServer(token)
-      .then((userData) => {
-        setIsLoggedIn(true);
-        setIsRegister(true);
-        setCurrentUser(userData);
-      })
-      .catch((error) => console.log(error));
+      mainApi
+        .checkTokenOnServer(token)
+        .then((userData) => {
+          setIsLoggedIn(true);
+          setIsRegister(true);
+          setCurrentUser(userData);
+        })
+        .catch((error) => console.log(error));
     }
   }, [token]);
 
@@ -104,6 +102,34 @@ export default function App() {
     return navigate("/", { replace: true });
   };
 
+  const renderUserNavigate = () => {
+    return (
+      <>
+        <Header isLoggedIn={token} />
+        <Main />
+        <Footer />
+      </>
+    );
+  };
+
+  const navigateLoggedInUser = () => {
+    if (location.pathname === "/signup") {
+      return isLoggedIn ? (
+        renderUserNavigate()
+      ) : (
+        <Register handleRegister={handleRegister} />
+      );
+    }
+    if (location.pathname === "/signin") {
+      return isLoggedIn ? (
+        renderUserNavigate()
+      ) : (
+        <Login handleLogin={handleLogin} />
+      );
+    }
+  };
+
+  //для фильмов
   const searchMovies = (text) => {
     if (isLoggedIn) {
       const jwt = localStorage.getItem("jwt");
@@ -191,8 +217,7 @@ export default function App() {
     }
   }, [savedMovies]);
 
-
-
+  //для попапов
   useEffect(() => {
     function handleClickClose(e) {
       if (e.target.classList.contains("popup__opened")) {
@@ -226,33 +251,6 @@ export default function App() {
     setTimeout(() => setIsInfoTooltip(false), 1900);
   };
 
-  const renderUserNavigate = () => {
-    return (
-      <>
-        <Header isLoggedIn={token} />
-        <Main />
-        <Footer />
-      </>
-    );
-  };
-
-  const navigateLoggedInUser = () => {
-    if (location.pathname === "/signup") {
-      return isLoggedIn ? (
-        renderUserNavigate()
-      ) : (
-        <Register handleRegister={handleRegister} />
-      );
-    }
-    if (location.pathname === "/signin") {
-      return isLoggedIn ? (
-        renderUserNavigate()
-      ) : (
-        <Login handleLogin={handleLogin} />
-      );
-    }
-  };
-
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
@@ -261,9 +259,7 @@ export default function App() {
             path="/"
             element={
               <>
-
                 <Main />
-
               </>
             }
           />
@@ -339,9 +335,9 @@ export default function App() {
         isOpen={isPopupErr}
         onClose={handleClosePopupErr}
         isRegister={isRegister}
-        />
+      />
 
-<InfoTooltip isOpen={isInfoTooltip} />
+      <InfoTooltip isOpen={isInfoTooltip} />
     </CurrentUserContext.Provider>
   );
 }

@@ -6,10 +6,10 @@ export default function InfoTooltip({ isOpen }) {
   const location = useLocation();
 
   const info = (message) => {
-    if (location.pathname === '/profile') {
-      return message = 'Данные успешно обновлены';
-    } else if (location.pathname === '/movies' || '/saved-movies') {
-      return message = 'Нужно ввести ключевое слово';
+    if (location.pathname === "/profile") {
+      return (message = "Данные успешно обновлены");
+    } else if (location.pathname === "/movies" || "/saved-movies") {
+      return (message = "Нужно ввести ключевое слово");
     }
   };
 

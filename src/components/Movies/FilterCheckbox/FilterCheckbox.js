@@ -6,24 +6,30 @@ export default function FilterCheckbox({ onClick }) {
   const [isActive, setIsActive] = useState(false);
   const location = useLocation();
 
+  const checkboxClasses = !isActive
+    ? "checkbox-block__slider"
+    : `checkbox-block__slider checkbox-block__slider_active`;
+
   useEffect(() => {
-    if ((location.pathname === '/saved-movies') && (localStorage.getItem('savedCheckboxData') === 'true')) {
+    if (
+      location.pathname === "/saved-movies" &&
+      localStorage.getItem("savedCheckboxData") === "true"
+    ) {
       setIsActive(true);
-    } else if ((location.pathname === '/movies') && (localStorage.getItem('checkboxData') === 'true')) {
+    } else if (
+      location.pathname === "/movies" &&
+      localStorage.getItem("checkboxData") === "true"
+    ) {
       setIsActive(true);
     } else {
       setIsActive(false);
     }
-  }, [location.pathname])
+  }, [location.pathname]);
 
   const handleClick = () => {
     setIsActive(!isActive);
     onClick();
   };
-
-  const checkboxClasses = !isActive
-    ? "checkbox-block__slider"
-    : `checkbox-block__slider checkbox-block__slider_active`;
 
   return (
     <div className="checkbox-block">

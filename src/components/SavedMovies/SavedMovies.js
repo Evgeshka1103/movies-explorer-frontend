@@ -62,7 +62,6 @@ export default function SavedMovies({
           <Link to="/">
             <img className="saved-movies__logo" src={logo} alt="Логотип" />
           </Link>
-
           <NavProfile />
           <BurgerMenu />
         </header>

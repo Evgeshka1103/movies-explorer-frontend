@@ -52,6 +52,7 @@ class Api {
     }).then(this._checkGetResponse);
   }
 
+  //фильмы
   getSavedMovies(token) {
     return fetch(`${this._baseUrl}/movies`, {
       method: "GET",
