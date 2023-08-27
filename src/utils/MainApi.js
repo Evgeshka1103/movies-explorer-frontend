@@ -98,8 +98,8 @@ class Api {
   }
 
   //Удаление фильма
-  deleteMovie(id) {
-    return fetch(`${this._baseUrl}/movies/${id}`, {
+  deleteMovie(movieId) {
+    return fetch(`${this._baseUrl}/movies/${movieId}`, {
       method: "DELETE",
       headers: this._checkToken(this._headers),
     }).then(this._checkGetResponse);

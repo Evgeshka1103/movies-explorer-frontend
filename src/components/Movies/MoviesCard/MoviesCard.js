@@ -4,6 +4,12 @@ import { useLocation } from "react-router-dom";
 import mainApi from "../../../utils/MainApi";
 
 export default function MoviesCard({ movie, savedMovies, setSavedMovies }) {
+
+  useEffect(() => {
+    savedMovies && savedMovies.some((card) => card.nameRU === movie.nameRU) ?
+        setIsLiked(true) : setIsLiked(false);
+}, [savedMovies, movie.nameRU]);
+
   const location = useLocation();
   const [isLiked, setIsLiked] = useState(false);
 
@@ -20,10 +26,7 @@ export default function MoviesCard({ movie, savedMovies, setSavedMovies }) {
     }
   };
 
-  useEffect(() => {
-    savedMovies && savedMovies.some((card) => card.nameRU === movie.nameRU) ?
-        setIsLiked(true) : setIsLiked(false);
-}, [savedMovies, movie.nameRU]);
+
 
   const favorite = isLiked ? 'movies-card__save-active' : '';
   const deleteButton = 'movies-card__delete';
@@ -44,7 +47,7 @@ export default function MoviesCard({ movie, savedMovies, setSavedMovies }) {
     }
 
     if (isLiked) {
-      const favorites = savedMovies.find((card) => card.id === movie.id);
+      const favorites = savedMovies.find((card) => card.movieId === movie.id);
       mainApi.deleteMovie(favorites._id, jwt)
         .then((res) => {
           if (res) {
