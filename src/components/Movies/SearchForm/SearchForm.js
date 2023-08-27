@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import React from "react";
 
 export default function SearchForm({
-  handleFormSubmit,
+  onSubmit,
   onChange,
   searchMovies,
   setIsSearched,
@@ -38,7 +38,7 @@ export default function SearchForm({
   return (
     <section className="search">
       <div className="search__block-form">
-        <form className="search__form" onSubmit={handleFormSubmit}>
+        <form className="search__form" onSubmit={onSubmit}>
           <div className="search__form-block-input">
             <input
               className="search__form-input"
