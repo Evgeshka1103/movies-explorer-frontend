@@ -69,6 +69,20 @@
   color: #000000;
 }
 
+.profile__input {
+  min-width: 122px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: end;
+  padding: 16px 0;
+  color: #000000;
+  border: none;
+}
+
+
 .profile__input-email {
   min-width: 122px;
   font-family: "Inter", Arial, Helvetica, sans-serif;
