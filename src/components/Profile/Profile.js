@@ -55,9 +55,10 @@ export default function Profile({ handleUpdateUser, handleSignOut }) {
         <h2 className="profile__title">{`Привет, ${userName}!`}</h2>
         <form className="profile__form">
           <fieldset className="profile__form-inputs">
+          <span className="profile__error">{errors.name}</span>
             <div className="profile__input-content">
               <h5 className="profile__placeholder">Имя</h5>
-              <span className="profile__error">{errors.name}</span>
+
               <input
                 className="profile__input"
                 placeholder="name"
@@ -84,8 +85,9 @@ export default function Profile({ handleUpdateUser, handleSignOut }) {
                 onChange={handleChange}
                 required
               />
-              <span className="profile__error">{errors.email}</span>
+
             </div>
+            <span className="profile__error">{errors.email}</span>
           </fieldset>
 
           <div className="profile__block-buttons">
