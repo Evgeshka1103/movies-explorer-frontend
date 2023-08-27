@@ -6,11 +6,11 @@ import AboutMe from "./AboutMe/AboutMe";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
-export default function Main({ isLoggedIn }) {
+export default function Main() {
   return (
 
      <>
-     <Header isLoggedIn={isLoggedIn} />
+     <Header />
       <main className="main">
         <Promo />
         <AboutProject />
