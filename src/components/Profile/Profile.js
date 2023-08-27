@@ -74,7 +74,7 @@ export default function Profile({ handleUpdateUser, handleSignOut }) {
             <div className="profile__input-content">
               <h5 className="profile__placeholder">E-mail</h5>
               <input
-                className="profile__input"
+                className="profile__input_email"
                 placeholder="email"
                 type="email"
                 name="email"
