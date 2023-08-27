@@ -137,8 +137,10 @@
 }
 
 .profile__edit-button-disabled{
-color: grey;
+  background-color: #e8e8e8;
+color: bisque;
 cursor: none;
+border: none;
 }
 
 .profile__exit-button {
