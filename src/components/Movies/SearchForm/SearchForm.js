@@ -38,7 +38,7 @@ export default function SearchForm({
   return (
     <section className="search">
       <div className="search__block-form">
-        <form className="search__form">
+        <form className="search__form" onSubmit={handleFormSubmit}>
           <div className="search__form-block-input">
             <input
               className="search__form-input"
@@ -50,7 +50,7 @@ export default function SearchForm({
               required={false}
             />
           </div>
-          <button className="search__button" type="submit" onSubmit={handleFormSubmit}>
+          <button className="search__button" type="search">
             Поиск
           </button>
         </form>
