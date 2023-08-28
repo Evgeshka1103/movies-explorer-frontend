@@ -63,7 +63,7 @@ export default function MoviesCardList({
       setMoviesContent(moviesContent + 2);
     } else if (windowSize < 768) {
       setMoviesContent(moviesContent + 2);
-    } else if (windowSize > 767) {
+    } else if (windowSize > 768) {
       setMoviesContent(moviesContent + 3);
     }
   }
