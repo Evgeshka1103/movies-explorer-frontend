@@ -1,40 +1,34 @@
 import "./NavProfile.css";
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function NavProfile() {
-  const location = useLocation();
-
   return (
     <nav className="navbar-header-navigation-profile">
-      {(location.pathname === "/movies" ||
-        location.pathname === "/saved-movies" ||
-        location.pathname === "/profile") && (
-        <>
           <ul className="navbar-links-profile-movie">
             <li className="navbar-link-movie">
-              <Link to="/movies" className="navbar-link">
+              <NavLink to="/movies" className={({ isActive }) =>
+              isActive ? "navbar-link navbar-link-active" : "navbar-link"}>
                 Фильмы
-              </Link>
+              </NavLink>
             </li>
             <li className="navbar-link-mowies">
-              <Link to="/saved-movies" className="navbar-link-sav-movies ">
+              <NavLink to="/saved-movies" className={({  isActive }) =>
+              isActive ? "navbar-link-sav-movies navbar-link-sav-movies-active" : "navbar-link-sav-movies"}>
                 Сохраненные фильмы
-              </Link>
+              </NavLink>
             </li>
           </ul>
           <ul className="navbar-profile-acaunt">
             <li className="navbar-link-acaunt">
-              <Link to="/profile" className="navbar-link-acaunt-text">
+              <NavLink to="/profile" className="navbar-link-acaunt-text">
                 Аккаунт
-              </Link>
+              </NavLink>
             </li>
             <li className="navbar-link-acaunt-icon">
               <div className="navbar-icon"></div>
             </li>
           </ul>
-        </>
-      )}
     </nav>
   );
 }

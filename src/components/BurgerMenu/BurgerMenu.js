@@ -1,5 +1,5 @@
 import "./BurgerMenu.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import React from "react";
 
 export default function BurgerMenu(props) {
@@ -38,28 +38,25 @@ export default function BurgerMenu(props) {
             onClick={handleCloseBurgerClick}
           ></div>
           <ul className="burger-menu__items">
-            <li className="burger-menu__item">
-              <Link to="/" className="burger-menu__item-page">
+
+              <NavLink to="/" className={({ isActive }) => isActive ? "burger-menu__item burger-menu__item_active" : "burger-menu__item"}>
                 Главная
-              </Link>
-            </li>
-            <li className="burger-menu__item-movie">
-              <Link to="/movies" className="burger-menu__item-movies">
+              </NavLink>
+
+              <NavLink to="/movies" className={({ isActive }) => isActive ? "burger-menu__item burger-menu__item_active" : "burger-menu__item"}>
                 Фильмы
-              </Link>
-            </li>
-            <div className="burger-menu__line"></div>
-            <li className="burger-menu__item-saved">
-              <Link to="/saved-movies" className="burger-menu__item-sav-movie">
+              </NavLink>
+
+              <NavLink to="/saved-movies" className={({ isActive }) => isActive ? "burger-menu__item burger-menu__item_active" : "burger-menu__item"}>
                 Сохраненные фильмы
-              </Link>
-            </li>
+              </NavLink>
+
           </ul>
           <ul className="burger-menu__acaunt">
             <li className="burger-menu__link-acaunt">
-              <Link to="/profile" className="burger-menu__acaunt-text">
+              <NavLink to="/profile" className="burger-menu__acaunt-text">
                 Аккаунт
-              </Link>
+              </NavLink>
             </li>
             <li className="burger-menu__acaunt-icon">
               <div className="burger-menu__icon"></div>

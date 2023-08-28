@@ -13,12 +13,20 @@
 
 .navbar-link {
   font-family: "Inter", Arial, Helvetica, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   font-size: 13px;
   line-height: 18px;
   color: #000000;
   text-decoration: none;
+}
+
+.navbar-link-active{
+  font-weight: 500;
+}
+
+.navbar-link:hover{
+  opacity: 0.5;
 }
 
 .navbar-link-sav-movies {
@@ -29,6 +37,14 @@
   line-height: 18px;
   color: #000000;
   text-decoration: none;
+}
+
+.navbar-link-sav-movies-active{
+  font-weight: 500;
+}
+
+.navbar-link-sav-movies:hover{
+  opacity: 0.5;
 }
 
 .navbar-profile-acaunt {
