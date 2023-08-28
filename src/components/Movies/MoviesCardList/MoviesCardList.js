@@ -28,7 +28,7 @@ export default function MoviesCardList({
     }
   });
 
-  /*useEffect(() => {
+  useEffect(() => {
     contentMovies();
     window.addEventListener("resize", (e) => resizeMovies(e));
     return () => {
@@ -60,13 +60,13 @@ export default function MoviesCardList({
 
   function handleContentMovies() {
     if (windowSize < 480) {
-      setMoviesContent(moviesContent + 1);
+      setMoviesContent(moviesContent + 2);
     } else if (windowSize < 768) {
       setMoviesContent(moviesContent + 2);
-    } else if (windowSize > 769) {
+    } else if (windowSize > 767) {
       setMoviesContent(moviesContent + 3);
     }
-  }*/
+  }
 
   return (
     <>
@@ -88,7 +88,7 @@ export default function MoviesCardList({
         {moviesContent >= filterCheckTime.length ? null : (
           <button
             className="movies-card-buton-content"
-            /*onClick={handleContentMovies}*/
+            onClick={handleContentMovies}
           >
             Ещё
           </button>
