@@ -7,7 +7,7 @@ import React, { useContext, useEffect } from "react";
 import { CurrentUserContext } from "../../Context/CurreentUserContext";
 import useFormWithValidation from "../../hooks/useFormWithValidation";
 
-export default function Profile({ handleUpdateUser, onSubmit, handleSignOut }) {
+export default function Profile({ handleUpdateUser, handleSignOut }) {
 
   const currentUser = useContext(CurrentUserContext);
   const userName = currentUser.name;
@@ -53,7 +53,7 @@ export default function Profile({ handleUpdateUser, onSubmit, handleSignOut }) {
 
       <div className="profile__content">
         <h2 className="profile__title">{`Привет, ${userName}!`}</h2>
-        <form className="profile__form" onSubmit={handleFormSubmit}>
+        <form className="profile__form" handleFormSubmit={handleFormSubmit}>
           <fieldset className="profile__form-inputs">
           <span className="profile__error">{errors.name}</span>
             <div className="profile__input-content">
