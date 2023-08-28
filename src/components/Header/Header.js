@@ -4,15 +4,14 @@ import logo from "../../images/logo.svg";
 import Navigation from "../Navigation/Navigation";
 import React from "react";
 
-export default function Header({ type, isLoggedIn }) {
+export default function Header({ isLoggedIn }) {
   return (
-    <header className={`header header_${type}`}>
-      <div className={`header__container header__container_${type}`}>
+    <header className="header">
+      <div className="header__container">
         <Link to="/">
           <img className="header__logo" src={logo} alt="Логотип" />
         </Link>
-        { !isLoggedIn && <Navigation /> }
-        { isLoggedIn && <Navigation type='loggedIn' /> }
+        <Navigation isLoggedIn={isLoggedIn} />
         </div>
     </header>
   );
