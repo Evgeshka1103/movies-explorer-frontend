@@ -136,7 +136,11 @@
   cursor: pointer;
 }
 
-.profile__edit-button-disabled{
+.profile__edit-button{
+  opacity: 0.5;
+}
+
+.profile__edit-button_disabled{
   background-color: #e8e8e8;
 color: bisque;
 cursor: none;

@@ -16,7 +16,7 @@ export default function Profile({ handleUpdateUser, handleSignOut }) {
   const { values, setValues, handleChange, errors, isValid } = useFormWithValidation();
 
   const isDisabled = values.email === '' || !isValid || values.name === '' || (values.email === userEmail && values.name === userName);
-  const button = !isDisabled ? '' : 'profile__edit-button-disabled';
+  const button = !isDisabled ? '' : 'profile__edit-button_disabled';
 
   useEffect(() => {
     setValues({
@@ -93,7 +93,7 @@ export default function Profile({ handleUpdateUser, handleSignOut }) {
           </fieldset>
 
           <div className="profile__block-buttons">
-            <button className={`profile__edit-button${ button || !isValid ? `profile__edit-button-disabled` : '' }`} onClick={handleFormSubmit} type="submit" >
+            <button className={`profile__edit-button${ button || !isValid ? `profile__edit-button_disabled` : '' }`} onClick={handleFormSubmit} type="submit" >
               Редактировать
             </button>
             <Link to="/" className="profile__exit-button" onClick={handleExit}>
