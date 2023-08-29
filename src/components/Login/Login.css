@@ -71,7 +71,11 @@
 }
 
 .login__input_password{
-  color: #ff4062
+  color: #ff4062;
+}
+
+.login__input_password_active{
+  color: #000000;
 }
 
 .login__error {
