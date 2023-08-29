@@ -102,16 +102,6 @@ export default function App() {
     return navigate("/", { replace: true });
   };
 
-  const renderUserNavigate = () => {
-    return (
-      <>
-        <Header isLoggedIn={token} />
-        <Main />
-        <Footer />
-      </>
-    );
-  };
-
   //для фильмов
   const searchMovies = (text) => {
     if (isLoggedIn) {
