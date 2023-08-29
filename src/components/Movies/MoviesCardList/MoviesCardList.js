@@ -49,9 +49,9 @@ export default function MoviesCardList({
   }
 
   function resizeMovies(e) {
-    if (e.target.innerWidth >= 768) {
+    if (e.target.innerWidth >= 1099) {
       setMoviesContent(12);
-    } else if (e.target.innerWidth >= 480) {
+    } else if (e.target.innerWidth >= 689) {
       setMoviesContent(8);
     } else {
       setMoviesContent(5);
@@ -59,11 +59,11 @@ export default function MoviesCardList({
   }
 
   function handleContentMovies() {
-    if (windowSize < 480) {
+    if (windowSize < 689) {
       setMoviesContent(moviesContent + 2);
-    } else if (windowSize < 768) {
+    } else if (windowSize < 1099) {
       setMoviesContent(moviesContent + 2);
-    } else if (windowSize < 1280) {
+    } else if (windowSize > 1100) {
       setMoviesContent(moviesContent + 3);
     }
   }
