@@ -18,12 +18,12 @@
 }
 .search__form-block-input {
   margin: 25px auto 25px 25px;
-  max-width: 60px;
+  width: 100%;
   border: none;
 }
 .search__form-input {
   border: none;
-  min-width: 60px;
+  width: 100%;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-style: normal;

@@ -92,6 +92,11 @@ export default function App() {
       });
   };
 
+  const requestUserEdit = () => {
+    setIsInfoTooltip(true);
+    setTimeout(() => setIsInfoTooltip(false), 1900);
+  };
+
   const handleSignOut = () => {
     localStorage.clear();
     setSearchedMovies([]);
@@ -218,11 +223,6 @@ export default function App() {
 
   const handleOpenPopupErr = () => setIsPopupErr(true);
   const handleClosePopupErr = () => setIsPopupErr(false);
-
-  const requestUserEdit = () => {
-    setIsInfoTooltip(true);
-    setTimeout(() => setIsInfoTooltip(false), 1900);
-  };
 
   return (
     <CurrentUserContext.Provider value={currentUser}>

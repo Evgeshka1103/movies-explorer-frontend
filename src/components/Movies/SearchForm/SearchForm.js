@@ -43,9 +43,9 @@ export default function SearchForm({
             <input
               className="search__form-input"
               onChange={onChange}
-              type="text"
+              type="search"
               placeholder="Фильм"
-              name="movie"
+              name="search"
               value={setSearchValue() || ""}
               required={false}
             />
