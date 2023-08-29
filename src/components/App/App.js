@@ -317,7 +317,7 @@ export default function App() {
               <ProtectedRoute isLoggedIn={token}>
                 <>
                   <Profile
-                    isLoggedIn={isLoggedIn}
+                    isLoggedIn={token}
                     name={currentUser.name}
                     handleUpdateUser={handleUpdateUser}
                     handleSignOut={handleSignOut}
