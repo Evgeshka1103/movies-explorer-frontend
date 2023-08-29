@@ -39,8 +39,8 @@ export default function Login({ handleLogin }) {
           <h5 className="login__placeholder">Пароль</h5>
           <div className="login__field">
             <input
-              className={`login__input login__input_password ${
-                !isValid ? `login__input_password_active` : ""
+              className={`login__input login__input_password_active ${
+                !isValid ? `login__input_password` : ""
               }`}
               placeholder="password"
               type="password"
