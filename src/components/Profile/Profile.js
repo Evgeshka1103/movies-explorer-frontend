@@ -15,7 +15,7 @@ export default function Profile({ handleUpdateUser, handleSignOut }) {
   const userName = currentUser.name;
   const userEmail = currentUser.email;
 
-  const { values, setValues, handleChange, errors, isValid } = useFormWithValidation();
+  const { values, setValues, handleChange, errors, isValid, resetForm } = useFormWithValidation();
 
   const isDisabled = values.email === '' || !isValid || values.name === '' || (values.email === userEmail && values.name === userName);
   const button = !isDisabled ? '' : 'profile__edit-button_disabled';
@@ -27,20 +27,13 @@ export default function Profile({ handleUpdateUser, handleSignOut }) {
     });
   }, [currentUser, setValues, userName, userEmail]);
 
-  useEffect(() => {
-   setIsUpdateUser(
-    !(values.name === userName) || !(values.email === userEmail)
-   )
-
-
-  }, [values.name, values.email, userName, userEmail]);
-
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    handleUpdateUser({
+   !isDisabled && handleUpdateUser({
       name: values.name,
       email: values.email,
     });
+    resetForm();
   };
 
   const handleExit = () => {
@@ -59,7 +52,7 @@ export default function Profile({ handleUpdateUser, handleSignOut }) {
 
       <div className="profile__content">
         <h2 className="profile__title">{`Привет, ${userName}!`}</h2>
-        <form className="profile__form" onSubmit={handleFormSubmit}>
+        <form className="profile__form">
           <fieldset className="profile__form-inputs">
           <span className="profile__error">{errors.name}</span>
             <div className="profile__input-content">
@@ -99,7 +92,7 @@ export default function Profile({ handleUpdateUser, handleSignOut }) {
           </fieldset>
 
           <div className="profile__block-buttons">
-            <button className={`profile__edit-button ${ button || !isValid ? `profile__edit-button_disabled` : ""}`} type="submit" >
+            <button className={button} type="submit" onSubmit={handleFormSubmit} >
               Редактировать
             </button>
             <Link to="/" className="profile__exit-button" onClick={handleExit}>
