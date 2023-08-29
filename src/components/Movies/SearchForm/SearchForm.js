@@ -46,7 +46,7 @@ export default function SearchForm({
               type="text"
               placeholder="Фильм"
               name="movie"
-              defaultValue={setSearchValue() || ""}
+              value={setSearchValue() || ""}
               required={false}
             />
           </div>
