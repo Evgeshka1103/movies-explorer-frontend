@@ -23,12 +23,5 @@ export default function useFormWithValidation() {
     [setValues, setErrors, setIsValid]
   );
 
-  const onBlur = useCallback(
-    (newErrors = {}) => {
-      setErrors(newErrors);
-    },
-    [setErrors]
-  );
-
-  return { values, setValues, handleChange, errors, isValid, resetForm, onBlur };
+  return { values, setValues, handleChange, errors, isValid, resetForm };
 }
