@@ -55,7 +55,7 @@ export default function Profile({ handleUpdateUser, handleSignOut }) {
 
       <div className="profile__content">
         <h2 className="profile__title">{`Привет, ${userName}!`}</h2>
-        <form className="profile__form" onClick={handleFormSubmit}>
+        <form className="profile__form">
           <fieldset className="profile__form-inputs">
           <span className="profile__error">{errors.name}</span>
             <div className="profile__input-content">
@@ -93,7 +93,7 @@ export default function Profile({ handleUpdateUser, handleSignOut }) {
           </fieldset>
 
           <div className="profile__block-buttons">
-            <button className={`profile__edit-button ${ button || !isValid ? `profile__edit-button_disabled` : '' }`} type="submit" >
+            <button className={`profile__edit-button ${ button || !isValid ? `profile__edit-button_disabled` : '' }`} type="submit" onClick={handleFormSubmit} >
               Редактировать
             </button>
             <Link to="/" className="profile__exit-button" onClick={handleExit}>

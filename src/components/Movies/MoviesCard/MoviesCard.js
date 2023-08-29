@@ -96,7 +96,7 @@ export default function MoviesCard({ movie, savedMovies, setSavedMovies }) {
 
       <button
         type="button"
-        className={`movies-card__save movies-card__save${buttonClasses}`}
+        className={`movies-card__save movies-card__save ${buttonClasses}`}
         onClick={buttonsFunction}
       ></button>
 

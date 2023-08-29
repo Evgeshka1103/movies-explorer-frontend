@@ -108,6 +108,7 @@ export default function Movies({
             setCheckbox={setCheckbox}
           />
         ) : null}
+
       </div>
       <Footer />
     </div>
