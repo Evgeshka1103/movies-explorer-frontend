@@ -8,37 +8,38 @@ import { CurrentUserContext } from "../../Context/CurreentUserContext";
 import useFormWithValidation from "../../hooks/useFormWithValidation";
 
 export default function Profile({ handleUpdateUser, handleSignOut }) {
+  const [isUpdateUser, setIsUpdateUser] = useState(false);
   const currentUser = useContext(CurrentUserContext);
- const [isValidForm, setIsValidForm] = useState(false);
- const [isDisabledInput, setIsDisabledInput] = useState(false);
 
-  const { values, setValues, handleChange, errors, isValid, onBlur } = useFormWithValidation();
+  const userName = currentUser.name;
+  const userEmail = currentUser.email;
+
+  const { values, setValues, handleChange, errors, isValid } = useFormWithValidation();
+
+  const isDisabled = values.email === '' || !isValid || values.name === '' || (values.email === userEmail && values.name === userName);
+  const button = !isDisabled ? '' : 'profile__edit-button_disabled';
 
   useEffect(() => {
     setValues({
-      ...values, name: currentUser.name, email: currentUser.email
+      name: userName,
+      email: userEmail,
     });
-  }, []);
+  }, [currentUser, setValues, userName, userEmail]);
 
   useEffect(() => {
-  if (values.name === currentUser.name && values.email === currentUser.email) {
-    setIsValidForm(false);
-  } else {
-    if (isValid) {
-      setIsValidForm(true);
-    }
-  }
+   setIsUpdateUser(
+    !(values.name === userName) || !(values.email === userEmail)
+   )
 
-  }, [values, currentUser]);
+
+  }, [values.name, values.email, userName, userEmail]);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    setIsDisabledInput(true);
     handleUpdateUser({
-      name: values['name'],
-      email: values['email'],
+      name: values.name,
+      email: values.email,
     });
-    setIsDisabledInput(false);
   };
 
   const handleExit = () => {
@@ -56,7 +57,7 @@ export default function Profile({ handleUpdateUser, handleSignOut }) {
       </header>
 
       <div className="profile__content">
-        <h2 className="profile__title">{`Привет, ${currentUser.name}!`}</h2>
+        <h2 className="profile__title">{`Привет, ${userName}!`}</h2>
         <form className="profile__form" onSubmit={handleFormSubmit}>
           <fieldset className="profile__form-inputs">
           <span className="profile__error">{errors.name}</span>
@@ -64,7 +65,6 @@ export default function Profile({ handleUpdateUser, handleSignOut }) {
               <h5 className="profile__placeholder">Имя</h5>
 
               <input
-                disabled={isDisabledInput}
                 className="profile__input"
                 placeholder="name"
                 type="name"
@@ -80,7 +80,6 @@ export default function Profile({ handleUpdateUser, handleSignOut }) {
             <div className="profile__input-content">
               <h5 className="profile__placeholder">E-mail</h5>
               <input
-              disabled={isDisabledInput}
                 className="profile__input-email"
                 placeholder="email"
                 type="email"
@@ -89,7 +88,6 @@ export default function Profile({ handleUpdateUser, handleSignOut }) {
                 maxLength={30}
                 value={values.email || ''}
                 onChange={handleChange}
-                onBlur={onBlur}
                 required={true}
               />
 
@@ -98,7 +96,7 @@ export default function Profile({ handleUpdateUser, handleSignOut }) {
           </fieldset>
 
           <div className="profile__block-buttons">
-            <button disabled={!isValidForm || isDisabledInput} className={!isValidForm ? 'profile__edit-button profile__edit-button_disabled' : 'profile__edit-button' } type="submit" >
+            <button className={`profile__edit-button ${ button || !isValid ? `profile__edit-button_disabled` : ""}`} type="submit" >
               Редактировать
             </button>
             <Link to="/" className="profile__exit-button" onClick={handleExit}>
