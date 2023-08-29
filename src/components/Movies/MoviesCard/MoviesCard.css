@@ -19,6 +19,21 @@
   cursor: pointer;
 }
 
+.movies-card__buton{
+  display: none;
+  width: 100%;
+  max-width: 360px;
+  height: 201px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.movies-card__buton:hover {
+display: block;
+cursor: pointer;
+}
+
 .movies-card__save {
   background-image: none;
   background-color: transparent;

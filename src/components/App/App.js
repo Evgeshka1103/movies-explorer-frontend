@@ -112,23 +112,6 @@ export default function App() {
     );
   };
 
-  const navigateLoggedInUser = () => {
-    if (location.pathname === "/signup") {
-      return isLoggedIn ? (
-        renderUserNavigate()
-      ) : (
-        <Register handleRegister={handleRegister} />
-      );
-    }
-    if (location.pathname === "/signin") {
-      return isLoggedIn ? (
-        renderUserNavigate()
-      ) : (
-        <Login handleLogin={handleLogin} />
-      );
-    }
-  };
-
   //для фильмов
   const searchMovies = (text) => {
     if (isLoggedIn) {
@@ -307,10 +290,22 @@ export default function App() {
             }
           />
 
-          <Route path="/signup" element={navigateLoggedInUser()} />
+          <Route
+            path="/signup"
+            element={
+              <Register
+                isLoggedIn={isLoggedIn}
+                handleRegister={handleRegister}
+              />
+            }
+          />
 
-          <Route path="/signin" element={navigateLoggedInUser()} />
-
+          <Route
+            path="/signin"
+            element={
+              <Login isLoggedIn={isLoggedIn} handleLogin={handleLogin} />
+            }
+          />
           <Route
             path="/profile"
             element={
