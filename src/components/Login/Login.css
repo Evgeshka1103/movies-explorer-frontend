@@ -70,23 +70,10 @@
   border-radius: 8px;
 }
 
-.login__password{
-  font-family: "Inter", Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 13px;
-  line-height: 16px;
-  padding: 15px;
-  background: #f9f9f9;
-  color: #000000;
-  border: none;
-  border-radius: 8px;
+.login__input_password{
   color: #ff4062;
 }
 
-.login__password_active{
-  color: #000000;
-}
 
 .login__error {
   width: 100%;
