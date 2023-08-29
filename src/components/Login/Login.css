@@ -70,6 +70,10 @@
   border-radius: 8px;
 }
 
+.login__input_password{
+  color: #ff4062
+}
+
 .login__error {
   width: 100%;
   font-family: "Inter", Arial, Helvetica, sans-serif;

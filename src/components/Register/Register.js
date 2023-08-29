@@ -56,7 +56,7 @@ export default function Register({ handleRegister }) {
           <h5 className="auth__placeholder">Пароль</h5>
           <div className="auth__field">
             <input
-              className="auth__input auth__input_password"
+              className={`auth__input ${ !isValid ? `auth__input_password` : ""}`}
               placeholder="password"
               type="password"
               name="password"
