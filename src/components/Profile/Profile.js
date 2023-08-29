@@ -6,6 +6,7 @@ import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import React, { useState, useContext, useEffect } from "react";
 import { CurrentUserContext } from "../../Context/CurreentUserContext";
 import useFormWithValidation from "../../hooks/useFormWithValidation";
+import { namePattern, emailPattern } from "../../Pattern/Pattern";
 
 export default function Profile({ handleUpdateUser, handleSignOut }) {
   const [isUpdateUser, setIsUpdateUser] = useState(false);
@@ -69,6 +70,7 @@ export default function Profile({ handleUpdateUser, handleSignOut }) {
                 placeholder="name"
                 type="name"
                 name="name"
+                pattern={namePattern}
                 minLength={2}
                 maxLength={30}
                 value={values.name || ''}
@@ -84,6 +86,7 @@ export default function Profile({ handleUpdateUser, handleSignOut }) {
                 placeholder="email"
                 type="email"
                 name="email"
+                pattern={emailPattern}
                 minLength={6}
                 maxLength={30}
                 value={values.email || ''}
