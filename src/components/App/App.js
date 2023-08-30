@@ -232,7 +232,7 @@ export default function App() {
             path="/"
             element={
               <>
-                <Main />
+                <Main isLoggedIn={isLoggedIn}/>
               </>
             }
           />
