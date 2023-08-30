@@ -86,7 +86,7 @@ export default function MoviesCardList({
         ))}
       </ul>
       <div className="movies-card-block-button">
-        { location.pathname === '/saved-movies' && (moviesContent >= filterCheckTime.length) ? null : (
+        { location.pathname === '/saved-movies' && (moviesContent <= filterCheckTime.length) ? null : (
           <button
             className="movies-card-buton-content"
             onClick={handleContentMovies}
