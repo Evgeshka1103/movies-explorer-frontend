@@ -97,12 +97,12 @@ export default function App() {
 
   const handleSignOut = () => {
     localStorage.clear();
-    localStorage.removeItem('saved');
+    setSearchedMovies([]);
     setMovies([]);
     setSavedMovies([]);
     setIsLoggedIn(false);
     setCurrentUser({});
-    navigate("/", { replace: true });
+    return navigate("/", { replace: true });
   };
 
   //для фильмов
