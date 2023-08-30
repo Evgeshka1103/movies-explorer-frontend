@@ -84,6 +84,7 @@ export default function App() {
       .then((data) => {
         setCurrentUser(data);
         localStorage.setItem("currentUser", JSON.stringify(data));
+        setIsInfoTooltip(true);
       })
       .catch((error) => {
         console.log(error);
@@ -321,7 +322,7 @@ export default function App() {
         isRegister={isRegister}
       />
 
-      <InfoTooltip isOpen={isInfoTooltip} />
+      <InfoTooltip isOpen={setIsInfoTooltip} />
     </CurrentUserContext.Provider>
   );
 }
