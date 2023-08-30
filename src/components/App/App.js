@@ -322,7 +322,7 @@ export default function App() {
         isRegister={isRegister}
       />
 
-      <InfoTooltip isOpen={setIsInfoTooltip} />
+      <InfoTooltip isOpen={isInfoTooltip} />
     </CurrentUserContext.Provider>
   );
 }
