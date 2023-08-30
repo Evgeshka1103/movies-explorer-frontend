@@ -12,6 +12,7 @@ export default function SearchForm({
   setCheckbox,
   checkSavedMovies,
   setCheckSavedMovies,
+  inputValue
 }) {
   const location = useLocation();
 
@@ -29,12 +30,6 @@ export default function SearchForm({
     }
   }
 
-  const setSearchValue = () => {
-    return location.pathname === "/movies"
-      ? localStorage.getItem("textSearch")
-      : localStorage.getItem("savedTextSearch");
-  };
-
   return (
     <section className="search">
       <div className="search__block-form">
@@ -46,7 +41,7 @@ export default function SearchForm({
               type="search"
               placeholder="Фильм"
               name="search"
-              value={setSearchValue() || ""}
+              value={inputValue}
               required={false}
             />
           </div>

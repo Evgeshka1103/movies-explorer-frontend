@@ -22,9 +22,7 @@ export default function Movies({
   setCheckbox,
 }) {
   const [isSearchform, setIsSearchform] = useState(false);
-  const [inputValue, setInputValue] = useState(
-    "" || localStorage.getItem("textSearch")
-  );
+  const [inputValue, setInputValue] = useState(localStorage.getItem("searchText") || "");
 
   useEffect(() => {
     const resultsSearchForm = localStorage.getItem("search");
