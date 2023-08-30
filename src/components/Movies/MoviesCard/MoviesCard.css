@@ -73,7 +73,7 @@
   right: 14px;
 }
 
-.movies-card__delete:hover {
+.movies-card:hover .movies-card__delete  {
   background-image: url(../../../images/icon-delete.svg);
 }
 
@@ -138,7 +138,7 @@
   }
 
   .movies-card__delete {
-    display: block;
+    background-image: url(../../../images/icon-delete.svg);
     top: 10px;
     right: 10px;
   }
