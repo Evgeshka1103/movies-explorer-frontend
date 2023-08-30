@@ -42,7 +42,6 @@ export default function Register({ handleRegister }) {
             <input
               className="auth__input"
               placeholder="email"
-              type="email"
               name="email"
               pattern={emailPattern}
               minLength={6}

@@ -77,7 +77,6 @@ export default function Profile({ handleUpdateUser, handleSignOut }) {
               <input
                 className="profile__input-email"
                 placeholder="email"
-                type="email"
                 name="email"
                 pattern={emailPattern}
                 minLength={6}
