@@ -84,7 +84,7 @@ export default function App() {
       .then((data) => {
         setCurrentUser(data);
         localStorage.setItem("currentUser", JSON.stringify(data));
-        setIsInfoTooltip(true);
+        hadleOpenInfoTooltip();
       })
       .catch((error) => {
         console.log(error);
@@ -218,6 +218,8 @@ export default function App() {
 
   const handleOpenPopupErr = () => setIsPopupErr(true);
   const handleClosePopupErr = () => setIsPopupErr(false);
+
+  const hadleOpenInfoTooltip = () => setIsInfoTooltip(true);
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
