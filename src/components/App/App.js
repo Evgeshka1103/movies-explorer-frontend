@@ -84,7 +84,6 @@ export default function App() {
       .then((data) => {
         setCurrentUser(data);
         localStorage.setItem("currentUser", JSON.stringify(data));
-        requestUserEdit();
       })
       .catch((error) => {
         console.log(error);

@@ -14,7 +14,7 @@ export default function MoviesCardList({
   checkSavedMovies,
 }) {
   const location = useLocation();
-  const windowSize = document.documentElement.clientWidth;
+  const [windowSize, setWindowSize] = useState(document.documentElement.clientWidth);
   const [moviesContent, setMoviesContent] = useState(null);
 
   const filterCheckTime = movies.filter((card) => {
@@ -49,6 +49,7 @@ export default function MoviesCardList({
   }
 
   function resizeMovies(e) {
+    setWindowSize(document.documentElement.clientWidth);
     if (e.target.innerWidth >= 1099) {
       setMoviesContent(12);
     } else if (e.target.innerWidth >= 689) {
@@ -85,7 +86,7 @@ export default function MoviesCardList({
         ))}
       </ul>
       <div className="movies-card-block-button">
-        {moviesContent >= filterCheckTime.length ? null : (
+        { location.pathname === '/movies' && (moviesContent >= filterCheckTime.length) ? null : (
           <button
             className="movies-card-buton-content"
             onClick={handleContentMovies}

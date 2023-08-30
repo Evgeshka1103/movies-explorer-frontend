@@ -36,8 +36,12 @@
   position: absolute;
 }
 
-.movies-card__save:hover {
+.movies-card:hover .movies-card__save {
   background-image: url(../../../images/icon.svg);
+}
+
+.movies-card:hover .movies-card__save-active {
+  background-image: url(../../../images/icon-activ.svg);
 }
 
 .movies-card__save-active {
