@@ -47,7 +47,10 @@ export default function App() {
           setIsRegister(true);
           setCurrentUser(userData);
         })
-        .catch((error) => console.log(error));
+        .catch((error) => {
+          handleSignOut();
+          console.log(error);
+        });
     }
   }, [token]);
 
@@ -230,7 +233,7 @@ export default function App() {
             path="/"
             element={
               <>
-                <Main isLoggedIn={isLoggedIn}/>
+                <Main isLoggedIn={isLoggedIn} />
               </>
             }
           />
