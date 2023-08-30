@@ -93,7 +93,8 @@ export default function MoviesCardList({
           >
             Ещё
           </button>
-        )}
+        )
+        }
       </div>
     </>
   );
