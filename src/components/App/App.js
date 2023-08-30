@@ -11,7 +11,7 @@ import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import PageNotFound from "../PageNotFound/PageNotFound";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-import InfoTooltip from "../Popup/PopupErr";
+import InfoTooltip from "../InfoTooltip/InfoTooltip";
 import PopupErr from "../Popup/PopupErr";
 
 import { CurrentUserContext } from "../../Context/CurreentUserContext";
@@ -85,6 +85,9 @@ export default function App() {
         setCurrentUser(data);
         localStorage.setItem("currentUser", JSON.stringify(data));
         setIsInfoTooltip(true);
+        setTimeout(() => {
+          setIsInfoTooltip(false);
+        }, 1500);
       })
       .catch((error) => {
         console.log(error);
