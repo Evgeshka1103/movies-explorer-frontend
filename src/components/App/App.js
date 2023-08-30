@@ -92,11 +92,6 @@ export default function App() {
       });
   };
 
-  const requestUserEdit = () => {
-    setIsInfoTooltip(true);
-    setTimeout(() => setIsInfoTooltip(false), 1900);
-  };
-
   const handleSignOut = () => {
     localStorage.clear();
     setSearchedMovies([]);

@@ -2,7 +2,7 @@ import React from "react";
 import "./InfoTooltip.css";
 import { useLocation } from "react-router-dom";
 
-export default function InfoTooltip({ isOpen }) {
+export default function InfoTooltip({ isInfoTooltip }) {
   const location = useLocation();
 
   const info = (message) => {
@@ -14,7 +14,7 @@ export default function InfoTooltip({ isOpen }) {
   };
 
   return (
-    <div className={`popup ${isOpen ? `popup__opened` : ""}`}>
+    <div className={`popup ${isInfoTooltip ? `popup__opened` : ""}`}>
       <div className="popup__container">
         <div className="popup__form">
           <h3 className="popup__tooltip-text">{info()}</h3>
