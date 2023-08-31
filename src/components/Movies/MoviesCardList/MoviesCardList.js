@@ -14,8 +14,10 @@ export default function MoviesCardList({
   checkSavedMovies,
 }) {
   const location = useLocation();
-  const [windowSize, setWindowSize] = useState(document.documentElement.clientWidth);
-  const [moviesContent, setMoviesContent] = useState(null);
+  const [windowSize, setWindowSize] = useState(
+    document.documentElement.clientWidth
+  );
+  const [moviesContent, setMoviesContent] = useState(0);
 
   const filterCheckTime = movies.filter((card) => {
     if (location.pathname === "/movies") {
@@ -87,18 +89,15 @@ export default function MoviesCardList({
       </ul>
 
       <div className="movies-card-block-button">
-      { location.pathname === '/movies' && moviesContent >= filterCheckTime.length ? (
+        {location.pathname === "/movies" &&
+        moviesContent < filterCheckTime.length ? (
           <button
             className="movies-card-buton-content"
             onClick={handleContentMovies}
           >
             Ещё
           </button>
-        )
-        :
-        null
-
-        }
+        ) : null}
       </div>
     </>
   );
