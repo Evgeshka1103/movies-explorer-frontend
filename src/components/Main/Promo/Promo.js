@@ -10,8 +10,9 @@ export default function Promo() {
           Учебный проект студента факультета Веб-разработки.
         </h1>
 
-<NavTab />
+
 </div>
+<NavTab />
     </section>
 
   );
