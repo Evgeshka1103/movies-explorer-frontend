@@ -43,7 +43,7 @@
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  z-index: 1;
+  z-index: 4;
 }
 
 .burger-menu__active {
