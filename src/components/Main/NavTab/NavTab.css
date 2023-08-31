@@ -25,6 +25,12 @@
   padding-top: 24px;
 }
 
+@media screen and (maw-width: 768px) {
+  .promo__nav-tab{
+    margin: 240px 0 0;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .promo__nav-tab-block {
     padding: 0 50px;

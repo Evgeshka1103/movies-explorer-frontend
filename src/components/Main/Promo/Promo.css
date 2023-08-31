@@ -28,14 +28,14 @@
 
 @media (max-width: 768px) {
   .promo {
-    padding: 224px 0 240px;
+    padding: 224px 0 0;
     background-position: center 224px;
   }
 
   .promo__title {
     max-width: 730px;
 
-    padding: 0 19px;
+    padding:102px 0;
   }
 }
 
