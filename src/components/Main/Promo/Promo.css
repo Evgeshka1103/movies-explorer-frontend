@@ -39,31 +39,17 @@
   }
 }
 
-@media (max-width: 560px) {
-  .promo {
-    padding: 207px 0 246px;
-
-    background-position: center center;
-    background-size: 248px;
-  }
-
-  .promo__title {
-    padding: 0 10px;
-    font-size: 31px;
-    line-height: 39px;
-  }
-}
-
 @media (max-width: 320px) {
   .promo {
-    padding: 207px 0 246px;
+    padding: 135px 0 ;
 
-    background-position: center 142px;
+    background-position: center 135px;
   }
 
   .promo__title {
-    padding: 0 10px;
+    padding: 72px 0 66px;
     font-size: 31px;
     line-height: 39px;
+    max-width: 300px;
   }
 }

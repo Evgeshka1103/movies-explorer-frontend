@@ -32,6 +32,10 @@
 }
 
 @media screen and (max-width: 320px) {
+.promo__nav-tab{
+  margin: 180px 0 0;
+}
+
   .promo__nav-tab-block {
     padding: 0 50px;
     gap: 24px;
