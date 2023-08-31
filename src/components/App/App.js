@@ -9,8 +9,6 @@ import Movies from "../Movies/Movies";
 import SavedMovies from "../SavedMovies/SavedMovies";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import PageNotFound from "../PageNotFound/PageNotFound";
-import Footer from "../Footer/Footer";
-import Header from "../Header/Header";
 import InfoTooltip from "../InfoTooltip/InfoTooltip";
 import PopupErr from "../Popup/PopupErr";
 
@@ -123,8 +121,8 @@ export default function App() {
             })
             .catch((err) => console.log(err));
         } else {
-          const searchList = JSON.parse(localStorage.getItem("add-movies"));
-          setMovies(filterCheckMovies(searchList, text));
+          const searchMoviesList = JSON.parse(localStorage.getItem("add-movies"));
+          setMovies(filterCheckMovies(searchMoviesList, text));
         }
       } else if (location.pathname === "/saved-movies") {
         mainApi
@@ -141,10 +139,10 @@ export default function App() {
   const filterCheckMovies = (data, text) => {
     const searchMoviesList = data.filter((movie) => {
       if (movie.nameRU.toLowerCase().includes(text.toLowerCase())) {
-        if (movie.duration <= 1 && isCheckBoxOpen) {
+        if ((movie.duration <= 1) && (isCheckBoxOpen)) {
           return movie;
         }
-        if (movie.duration >= 1 && !isCheckBoxOpen) {
+        if ((movie.duration >= 1) && (!isCheckBoxOpen)) {
           return movie;
         }
         return false;
@@ -185,7 +183,8 @@ export default function App() {
   }, [isLoggedIn, savedMovies, navigate]);
 
   useEffect(() => {
-    mainApi.getSavedMovies(localStorage.getItem("jwt")).then((res) => {
+    mainApi.getSavedMovies(localStorage.getItem("jwt"))
+    .then((res) => {
       setSavedMovies(res);
     });
   }, []);
