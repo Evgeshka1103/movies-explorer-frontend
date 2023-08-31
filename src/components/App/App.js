@@ -103,6 +103,7 @@ export default function App() {
     setSavedMovies([]);
     setIsLoggedIn(false);
     setCurrentUser({});
+    setCheckbox(false);
     return navigate("/", { replace: true });
   };
 

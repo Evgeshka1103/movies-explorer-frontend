@@ -135,6 +135,10 @@
   .movies-card__delete {
     background-image: url(../../../images/icon-delete.svg);
   }
+
+  .movies-card__save-active{
+    background-image: url(../../../images/icon-activ.svg);
+  }
 }
 
 @media screen and (max-width: 320px){
