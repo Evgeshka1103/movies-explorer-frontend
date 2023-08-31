@@ -74,7 +74,7 @@ export default function MoviesCardList({
   return (
     <>
       <ul className="movies-card-list">
-        {filterCheckTime.slice(0, moviesContent).map((movie) => (
+        {filterCheckTime.map((movie) => (
           <MoviesCard
             movie={movie}
             key={movie.id || movie._id}

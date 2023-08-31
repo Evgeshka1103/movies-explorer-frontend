@@ -76,7 +76,7 @@ export default function Movies({
         <SearchForm
           setIsSearchform={isSearchform}
           searchMovies={searchMovies}
-
+          inputValue={inputValue}
           checkbox={checkbox}
           setCheckbox={setCheckbox}
           onChange={handleSearchForm}
